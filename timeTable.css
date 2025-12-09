@@ -1,0 +1,63 @@
+:root {
+  --accent1: #1f93ff;
+  --accent2: #0f5bd6;
+  --bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 100px;
+  background: var(--bg);
+  color: #070b14;
+  -webkit-font-smoothing: antialised;
+  line-height: 1.4;
+}
+
+header {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  padding: 16px 20px;
+  font-family: inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centered title */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.heads {
+  font-family: inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+/* Your original styles continue below */
+button {
+  font-display: 18px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 18px;
+}
+
+label {
+  margin: 0;
+  padding-top: 2px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  display: block;
+}
+
+#selectRegion,
+#areaSelect,
+#selectDestination {
+  width: 350px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,141 @@
+{
+  "North Area": {
+    "ChesterVille": {
+      "City": [
+        { "Route No": "200", "time": "06:30" },
+        { "Route No": "200", "time": "07:30" },
+        { "Route No": "200", "time": "08:00" },
+        { "Route No": "200", "time": "08:30" },
+        { "Route No": "200", "time": "09:00" },
+        { "Route No": "200", "time": "09:20" },
+        { "Route No": "200", "time": "09:40" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "06:30" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ]
+    }
+  },
+
+  "South area": {
+    "Umlazi-1 F&G Route-1": {
+      "City": [
+        { "Route No": "200", "time": "04:00" },
+        { "Route No": "200", "time": "04:50" },
+        { "Route No": "200", "time": "05:30" },
+        { "Route No": "200", "time": "06:20" },
+        { "Route No": "200", "time": "07:00" },
+        { "Route No": "200", "time": "07:15" },
+        { "Route No": "200", "time": "07:30" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "05:20" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ],
+      "Westmead": [
+        { "Route No": "229", "time": "05:00" },
+        { "Route No": "203", "time": "05:15" },
+        { "Route No": "203", "time": "05:20" },
+        { "Route No": "203", "time": "06:00" },
+        { "Route No": "229", "time": "06:15" }
+      ]
+    },
+    "Umlazi-2 M&N Route-2": {
+      "City": [
+        { "Route No": "200", "time": "04:00" },
+        { "Route No": "200", "time": "04:50" },
+        { "Route No": "200", "time": "05:30" },
+        { "Route No": "200", "time": "06:20" },
+        { "Route No": "200", "time": "07:00" },
+        { "Route No": "200", "time": "07:15" },
+        { "Route No": "200", "time": "07:30" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "05:20" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ],
+      "Westmead": [
+        { "Route No": "229", "time": "05:00" },
+        { "Route No": "203", "time": "05:15" },
+        { "Route No": "203", "time": "05:20" },
+        { "Route No": "203", "time": "06:00" },
+        { "Route No": "229", "time": "06:15" }
+      ]
+    },
+    "Umlazi-4 BB Route-4": {
+      "City": [
+        { "Route No": "200", "time": "06:30" },
+        { "Route No": "200", "time": "07:30" },
+        { "Route No": "200", "time": "08:00" },
+        { "Route No": "200", "time": "08:30" },
+        { "Route No": "200", "time": "09:00" },
+        { "Route No": "200", "time": "09:20" },
+        { "Route No": "200", "time": "09:40" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "06:30" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ]
+    },
+    "Umlazi-5-U-Route-5": {
+      "City": [
+        { "Route No": "200", "time": "06:30" },
+        { "Route No": "200", "time": "07:30" },
+        { "Route No": "200", "time": "08:00" },
+        { "Route No": "200", "time": "08:30" },
+        { "Route No": "200", "time": "09:00" },
+        { "Route No": "200", "time": "09:20" },
+        { "Route No": "200", "time": "09:40" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "06:30" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ]
+    },
+    "Umlazi-6 ZAA Route-6": {
+      "City": [
+        { "Route No": "200", "time": "06:30" },
+        { "Route No": "200", "time": "07:30" },
+        { "Route No": "200", "time": "08:00" },
+        { "Route No": "200", "time": "08:30" },
+        { "Route No": "200", "time": "09:00" },
+        { "Route No": "200", "time": "09:20" },
+        { "Route No": "200", "time": "09:40" }
+      ],
+      "Point": [
+        { "Route No": "208", "time": "04:30" },
+        { "Route No": "208", "time": "05:00" },
+        { "Route No": "203", "time": "06:30" }
+      ],
+      "Fynnlands": [
+        { "Route No": "218", "time": "04:40" },
+        { "Route No": "218", "time": "06:00" }
+      ]
+    }
+  }
+}
