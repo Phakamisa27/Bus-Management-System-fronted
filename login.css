@@ -1,0 +1,98 @@
+:root {
+  --bg1: white;
+  --bg2: #0f5bd6; /* darker blue */
+  --card: rgba(255, 255, 255, 0.06);
+  --border: #1b2740;
+  --text-light: black;
+  --muted: #c1cbe0;
+  --button1: #1f93ff;
+  --button2: #0f5bd6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("bus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: system-ui, Arial;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 30px;
+  width: 330px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fbfbfc;
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 1px;
+  outline-offset: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--button1), var(--button2));
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+p {
+  color: var(--button2);
+  text-align: center;
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}

@@ -3,23 +3,26 @@
   <head> 
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Select Your Router</title> <link rel="stylesheet" href="select-route.css"> 
-     <link rel="stylesheet" href="timeTable.css">
- </head> 
- <body> 
+    <title>Select Your Router</title> 
+    <link rel="stylesheet" href="timeTable.css">
+  </head> 
+ <body>
   <!--Header for router--> 
   <header class="route"> 
     <h2>Durban Locals Buses</h2> 
   </header> 
   <main class="container"> 
-    <div style="width: 350px; display: block;"> 
+    <div style="width: 350px; display: block;">
+
       <!--Step1: Choose Region--> 
       <label class="form-label" for="chooseRegion">Choose Region</label> 
-      <select id="selectRegion"> <!--Select region--> 
+      <select id="selectRegion"> 
+        <!--JSON  file will be appended here--> 
+      </select> 
+    </div> 
 
-      </select> </div> 
       <!--Step2: Select Area--> 
-      <div id="selectedOption"> <div> 
+      <div id="selectedOption">
         <label for="areaSelect">Select Area</label>
          <select id="areaSelect">
            <!--JSON file will be appended here--> 
@@ -32,7 +35,9 @@
           <select id="selectDestination"> 
             <!--JSON file will be appended here--> 
           </select> 
-        </div> </div> 
+        </div> 
+      </div> 
+
         <!--TimeTable Of The available Buses--> 
         <div class="card" id="timetable"> 
           <h3 class="heads">List Of Available Bus</h3> 
@@ -42,11 +47,12 @@
         </div> 
       </div> 
       </div> 
+
       <!--Map showing Live Location--> 
       <section> 
         <h3 class="heads">Bus Live Location</h3> 
       </section> 
     </main> 
-    <script src="timeTable.js"></script>
+    <script src="script/timeTable.js"></script>
   </body> 
  </html>

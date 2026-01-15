@@ -1,0 +1,75 @@
+:root {
+  --header-bg: #414b52;
+  --accent: #f3e56b;
+  --brand-blue: #0b79d0;
+  --card-bg: white;
+  --page-bg: rgba(0, 0, 0, 0.4);
+  --mute: #64707a;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, san-serif;
+  background: var(--page-bg);
+  color: #0b1a1f;
+}
+/*FULL -WIDTH HEADER */
+header.appbar {
+  background: var(--header-bg);
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+  width: 100%;
+}
+header.appbar h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+/*HERO - FULL WIDTH */
+.hero {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+/*CARD - FULL WIDTH*/
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  width: 100%;
+  transition: 0.2s ease;
+}
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+.card p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+/* CTA BUTTON*/
+.cta {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--brand-blue);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  box-shadow: 0 5px 14px rgba(11, 121, 208, 0.25);
+}
+.card:hover {
+  transform: scale(1.03);
+}

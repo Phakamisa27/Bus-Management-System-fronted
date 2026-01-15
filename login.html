@@ -2,26 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
-    <link rel="stylesheet" href="select-route.css" />
-    <link rel="stylesheet" href="timeTable.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LogIn</title>
+    <link rel="stylesheet" href="login.css" />
   </head>
+
   <body>
-    <!--Header for router-->
-    <header class="route">
-      <h2>login</h2>
-    </header>
-    <main class="container">
-      <div>
-        <label for="username">Username</label>
-        <input type="text" />
-      </div>
-      <div>
-        <label for="username">Username</label>
-        <input type="text" />
-      </div>
-    </main>
-    <script src="timeTable.js"></script>
+    <div class="container">
+      <h2>Log In</h2>
+
+      <form action="dashboard.html" method="POST">
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
   </body>
 </html>
