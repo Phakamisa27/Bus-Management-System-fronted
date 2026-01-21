@@ -1,91 +1,71 @@
 //Step1: Get HTML element
 const regionSelect = document.getElementById("selectRegion");
 const areaSelect = document.getElementById("areaSelect");
-const destinationSelect = document.getElementsById("selectDestination");
+const destinationSelect = document.getElementById("selectDestination");
 const output = document.getElementById("output");
 
-//Step2: Variable to store JSON data
-let busData = {};
+//Step2: Empty box to keep data
+let data = {};
 
-//Step3: Fetch the JSON file
-fetch("js/timeTable.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! statu: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    busData = data;
-    loadRegion();
-  })
-  .catch((error) => {
-    console.error("Error fetching JSON:", error);
+//Step3: Get the JSON file
+fetch("timeTable.json")
+  .then((response) => response.json())
+  .then((json) => {
+    data = json;
+    loadRegions();
   });
 
-//Step4: load Region function
-function loadRegion() {
-  regionSelect.innerHTML = `<option value="">-- Select Region --</option>`;
-  for (let region in busData) {
-    const option = document.createElement("option");
-    option.value = region;
-    option.textContent = region;
-    regionSelect.appendChild(option);
+//Step4: load Region
+function loadRegions() {
+  regionSelect.innerHTML = "<option>Select Region</option>";
+
+  for (let region in data) {
+    let opt = document.createElement("option");
+    opt.textContent = region;
+    regionSelect.appendChild(opt);
   }
 }
-//Step5: load Area
-regionSelect.addEventListener("change", () => {
-  areaSelect.innerHTML = `<option value="">-- Select Area --<option>`;
-  destinationSelect.innerHTML = `<option value="">-- Select Destination --<option>`;
+
+//Step5: when user clicks region
+regionSelect.onchange = function () {
+  areaSelect.innerHTML = "<option>Select Area</option>";
+  destinationSelect.innerHTML = "";
   output.textContent = "";
 
-  const selectRegion = regionSelect.value;
-  if (!selectRegion) return;
+  let region = this.value;
 
-  const area = busData[selectRegion];
-
-  for (let area in area) {
-    const option = document.createElement("option");
-    option.value = area;
-    option.textContent = area;
-    areaSelect.appendChild(option);
+  for (let area in data[region]) {
+    let opt = document.createElement("option");
+    opt.textContent = area;
+    areaSelect.appendChild(opt);
   }
-});
+};
 
-//Step6: load destination
-areaSelect.addEventListener("change", () => {
-  destinationSelect.innerHTML = `<option value="">-- Select Destination --</option>`;
+//Step6: when user picks area
+areaSelect.onchange = function () {
+  destinationSelect.innerHTML = "";
   output.textContent = "";
 
-  const region = regionSelect.value;
-  const area = areaSelect.value;
-  if (!area) return;
+  let region = regionSelect.value;
+  let area = this.value;
 
-  const destination = busData[region][area];
-
-  for (let destination in destination) {
-    const option = document.createElement("option");
-    option.value = destination;
-    option.textContent = destination;
-    destinationSelect.appendChild(option);
+  for (let dest in data[region][area]) {
+    let opt = document.createElement("option");
+    opt.textContent = dest;
+    destinationSelect.appendChild(opt);
   }
-});
+};
 
-//Step7: load timetable
-destinationSelect.addEventListener("change", () => {
+destinationSelect.onchange = function () {
   output.textContent = "";
 
-  const region = regionSelect.value;
-  const area = areaSelect.value;
-  const destination = destination.value;
-  if (!destination) return;
+  let region = regionSelect.value;
+  let area = areaSelect.value;
+  let dest = this.value;
 
-  const buses = busData[region][area][destination];
-
-  let result = `Destination: ${destination}\n\n`;
+  let buses = data[region][area][dest];
 
   buses.forEach((bus) => {
-    result += `Route: ${bus["Route No"]} | Time: ${bus.time}\n`;
+    output.textContent += "Route " + bus["Route No"] + " - " + bus.time + "\n";
   });
-  output.textContent = result;
-});
+};
