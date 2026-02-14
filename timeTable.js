@@ -3,6 +3,7 @@ const regionSelect = document.getElementById("selectRegion");
 const areaSelect = document.getElementById("areaSelect");
 const destinationSelect = document.getElementById("selectDestination");
 const output = document.getElementById("output");
+const timeTable = document.getElementById("timetable");
 
 //Step2: Empty box to keep data
 let data = {};
@@ -56,6 +57,7 @@ areaSelect.onchange = function () {
   }
 };
 
+//Step 7: when click user choose destination
 destinationSelect.onchange = function () {
   output.textContent = "";
 
@@ -64,8 +66,11 @@ destinationSelect.onchange = function () {
   let dest = this.value;
 
   let buses = data[region][area][dest];
-
-  buses.forEach((bus) => {
-    output.textContent += "Route " + bus["Route No"] + " - " + bus.time + "\n";
-  });
 };
+
+//Step 8: Making bus list clickable
+timeTable.addEventListener("click", function (event) {
+  timeTable.data[region][area][dest];
+
+  buses.forEach((bus) => {});
+});
