@@ -7,8 +7,9 @@ const timeTable = document.getElementById("timetable");
 
 //Step2: Empty box to keep data
 let data = {};
+let currentBuses = [];
 
-//Step3: Get the JSON file
+//Step3: Get the JSON Data
 fetch("timeTable.json")
   .then((response) => response.json())
   .then((json) => {
@@ -18,7 +19,7 @@ fetch("timeTable.json")
 
 //Step4: load Region
 function loadRegions() {
-  regionSelect.innerHTML = "<option>Select Region</option>";
+  regionSelect.innerHTML = "<option> Select Region </option>";
 
   for (let region in data) {
     let opt = document.createElement("option");
@@ -29,7 +30,7 @@ function loadRegions() {
 
 //Step5: when user clicks region
 regionSelect.onchange = function () {
-  areaSelect.innerHTML = "<option>Select Area</option>";
+  areaSelect.innerHTML = "<option> Select Area </option>";
   destinationSelect.innerHTML = "";
   output.textContent = "";
 
@@ -57,20 +58,36 @@ areaSelect.onchange = function () {
   }
 };
 
-//Step 7: when click user choose destination
+//Step 7: where user choose destination
 destinationSelect.onchange = function () {
-  output.textContent = "";
+  output.innerHTML = "";
 
   let region = regionSelect.value;
   let area = areaSelect.value;
   let dest = this.value;
 
   let buses = data[region][area][dest];
+
+  currentBuses = buses;
+
+  output.innerHTML = "";
+
+  buses.forEach((bus) => {
+    const li = document.createElement("li");
+
+    li.textContent = "Route " + bus["Route No"] + " - " + bus.time;
+
+    li.classList.add("bus-item");
+
+    output.appendChild(li);
+  });
 };
 
 //Step 8: Making bus list clickable
 timeTable.addEventListener("click", function (event) {
-  timeTable.data[region][area][dest];
+  if (event.target.classList.contains("bus-item")) {
+    const selectedBus = event.target.textContent;
 
-  buses.forEach((bus) => {});
+    alert("Tracking bus: " + selectedBus);
+  }
 });
