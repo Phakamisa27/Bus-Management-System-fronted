@@ -10,7 +10,7 @@ let data = {};
 let currentBuses = [];
 
 //Step3: Get the JSON Data
-fetch("timeTable.json")
+fetch("data/timeTable.json")
   .then((response) => response.json())
   .then((json) => {
     data = json;
@@ -28,7 +28,7 @@ function loadRegions() {
   }
 }
 
-//Step5: when user clicks region
+//Step5: when user choose region
 regionSelect.onchange = function () {
   areaSelect.innerHTML = "<option> Select Area </option>";
   destinationSelect.innerHTML = "";
@@ -43,7 +43,7 @@ regionSelect.onchange = function () {
   }
 };
 
-//Step6: when user picks area
+//Step6: when user choose area
 areaSelect.onchange = function () {
   destinationSelect.innerHTML = "";
   output.textContent = "";
@@ -75,7 +75,8 @@ destinationSelect.onchange = function () {
   buses.forEach((bus) => {
     const li = document.createElement("li");
 
-    li.textContent = "Route " + bus["Route No"] + " - " + bus.time;
+    li.textContent =
+      "Route " + bus["Route No"] + " - " + bus.time + " - " + bus.status;
 
     li.classList.add("bus-item");
 

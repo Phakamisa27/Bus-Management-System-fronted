@@ -1,5 +1,5 @@
 //load bus companies from
-fetch("companies.json")
+fetch("data/companies.json")
   .then((response) => response.json())
   .then((companies) => {
     const grid = document.getElementById("companyGrid");
