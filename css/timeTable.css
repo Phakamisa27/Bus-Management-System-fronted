@@ -1,5 +1,4 @@
 :root {
-  --accent1: #1f93ff;
   --accent2: #0f5bd6;
   --bg: #ffffff;
 }
@@ -14,7 +13,7 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background: #0f5bd6;
   padding: 16px 20px;
   font-family:
     inter,
@@ -24,7 +23,7 @@ header {
     Roboto,
     "Helvetica Neue",
     Arial;
-  color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center; /* centered title */

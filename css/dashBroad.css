@@ -1,5 +1,4 @@
 :root {
-  --header-bg: #414b52;
   --accent: #f3e56b;
   --brand-blue: #0b79d0;
   --card-bg: white;
@@ -13,13 +12,13 @@
 }
 body {
   font-family: Inter, system-ui, san-serif;
-  background: var(--page-bg);
+  background: whitesmoke;
   color: #0b1a1f;
 }
 /*FULL -WIDTH HEADER */
 header.appbar {
-  background: var(--header-bg);
-  color: white;
+  background: #0b79d0;
+  color: black;
   padding: 20px 16px;
   text-align: center;
   width: 100%;
