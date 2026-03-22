@@ -58,7 +58,7 @@ areaSelect.onchange = function () {
   }
 };
 
-//Step 7: where user choose destination
+//when the use choose destination, show the buses of that destination
 destinationSelect.onchange = function () {
   output.innerHTML = "";
 
@@ -67,28 +67,37 @@ destinationSelect.onchange = function () {
   let dest = this.value;
 
   let buses = data[region][area][dest];
-
   currentBuses = buses;
-
-  output.innerHTML = "";
 
   buses.forEach((bus) => {
     const li = document.createElement("li");
 
-    li.textContent =
-      "Route " + bus["Route No"] + " - " + bus.time + " - " + bus.status;
-
     li.classList.add("bus-item");
+
+    li.innerHTML = `
+    <div class="bus-card">
+     
+     <div class="bus-top">
+      <strong>Bus${bus["Route No"]}</strong>
+     <div>
+      
+     <div class="bus-route">
+      ${area} -> ${dest}
+     </div>
+     
+     <div class="bus-times">
+      <span>Departure: ${bus.time}</span>
+      <span>Arrival: ${bus.time}</span>
+     </div>
+
+     <div class="bus-status ${bus.status === "Delayed" ? "delayed" : "ontime"}">
+      <strong>${bus.status}</strong><br>
+      Reason: ${bus.reason || "On Shcedule"}<br>
+      Extar-Time: ${bus.extarTime || "0 minutes"}
+     </div>
+    </div>
+    `;
 
     output.appendChild(li);
   });
 };
-
-//Step 8: Making bus list clickable
-timeTable.addEventListener("click", function (event) {
-  if (event.target.classList.contains("bus-item")) {
-    const selectedBus = event.target.textContent;
-
-    alert("Tracking bus: " + selectedBus);
-  }
-});
