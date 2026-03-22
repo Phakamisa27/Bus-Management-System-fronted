@@ -64,6 +64,63 @@ label {
     Arial;
   display: block;
 }
+/* Bus lis item */
+.bus-item {
+  list-style: none;
+  margin: 5px 0;
+  cursor: pointer;
+}
+/* Bus Card */
+.bus-card {
+  background: whitesmoke;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  transition: 0.2s;
+}
+/*hover effect (when you touch card)*/
+.bus-card:hover {
+  background: #e6f2ff;
+  transform: scale(1.01);
+}
+/*Bus name area*/
+.bus-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+/*Route*/
+.bus-route {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/*time(departure & arrival)*/
+.bus-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/*status box (GENERAL STYLE)*/
+.bus-status {
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/*STATUS COLOR*/
+.bus-status.delayed {
+  background: #f3e3c6;
+}
+
+.bus-status.ontime {
+  background: #e0f7e7;
+}
 
 #selectRegion,
 #areaSelect,
