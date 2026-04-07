@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding-bottom: 100px;
   background: rgb(237, 233, 233);
   color: #070b14;
@@ -8,8 +9,8 @@ body {
 }
 
 header {
-  background: #0f5bd6;
-  padding: 16px 20px;
+  background: #1e73ff;
+  padding: 5px 20px;
   font-family:
     inter,
     system-ui,
@@ -24,9 +25,57 @@ header {
   justify-content: center; /* centered title */
   font-weight: 700;
   letter-spacing: 0.5px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+label {
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #0069ff;
+  border: none;
+  color: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.suggestions {
+  background: #f2f2f2;
+  border-radius: 6px;
+  margin-top: 3px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.suggest-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggest-item:hover {
+  background: #ddd;
+}
+
+#busList li {
+  margin-top: 10px;
+
+  padding: 12px;
+  border-radius: 8px;
+  list-style: none;
+}
 .heads {
   font-family:
     inter,
@@ -38,32 +87,6 @@ header {
     Arial;
 }
 
-/* Your original styles continue below */
-button {
-  font-display: 18px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 0 18px;
-}
-
-label {
-  margin: 0;
-  padding-top: 2px;
-  font-weight: bold;
-  font-size: 20px;
-  font-family:
-    inter,
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial;
-  display: block;
-}
 /* Bus lis item */
 .bus-item {
   list-style: none;
@@ -72,61 +95,56 @@ label {
 }
 /* Bus Card */
 .bus-card {
-  background: whitesmoke;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  font-size: 13px;
-  transition: 0.2s;
-}
-/*hover effect (when you touch card)*/
-.bus-card:hover {
-  background: #e6f2ff;
-  transform: scale(1.01);
-}
-/*Bus name area*/
-.bus-top {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
-  margin-bottom: 2px;
+  align-items: center;
 }
-/*Route*/
-.bus-route {
+
+.bus-info h3 {
+  margin: 0;
   color: black;
-  font-size: 18px;
-  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/*time(departure & arrival)*/
-.bus-item {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  margin-bottom: 6px;
+.bus-info p {
+  margin: 3px 0;
+  color: black;
+  font-size: 14px;
 }
 
-/*status box (GENERAL STYLE)*/
-.bus-status {
-  padding: 6px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-/*STATUS COLOR*/
-.bus-status.delayed {
-  background: #f3e3c6;
-}
-
-.bus-status.ontime {
-  background: #e0f7e7;
-}
-
-#selectRegion,
-#areaSelect,
-#selectDestination {
-  width: 350px;
-  height: 35px;
+#findBtn {
+  width: 32%;
+  margin-top: 15px;
   padding: 10px;
+  background: #1e73ff;
+  color: white;
+  border: none;
   border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*Blue Button*/
+.timetable-btn {
+  background: #1a73e8;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease;
+}
+
+.timetable-btn:hover {
+  background: #1565c0;
 }

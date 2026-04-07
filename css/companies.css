@@ -5,7 +5,7 @@ body {
   background-blend-mode: darken;
 }
 header {
-  background-color: #0f5bd6;
+  background-color: #1e73ff;
   padding: 20px;
   text-align: center;
   color: rgb(237, 233, 233);
@@ -43,5 +43,5 @@ h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 700px;
-  color: #0f5bd6;
+  color: #1e73ff;
 }

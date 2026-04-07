@@ -1,57 +1,41 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  <head> 
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Select Your Router</title> 
-    <link rel="stylesheet" href="css/timeTable.css">
-  </head> 
- <body>
-  <!--Header for router--> 
-  <header class="route"> 
-    <h2>Bus Companies</h2> 
-  </header> 
-  <main class="container"> 
-    <div style="width: 350px; display: block;">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Your Router</title>
+    <link rel="stylesheet" href="css/timeTable.css" />
+  </head>
+  <body>
+    <header class="route">
+      <h2>Select Your Route</h2>
+    </header>
 
-      <!--Step1: Choose Region--> 
-      <label class="form-label" for="selectRegion">Choose Region</label> 
-      <select id="selectRegion"> 
-        <!--JSON  file will be appended here--> 
-      </select> 
-    </div> 
+    <div class="container">
+      <h2>Select Your Route</h2>
 
-      <!--Step2: Select Area--> 
-      <div id="selectedOption">
-        <label for="areaSelect">Select Area</label>
-         <select id="areaSelect">
-           <!--JSON file will be appended here--> 
-          </select> 
-        </div> 
+      <label>Select Area</label>
+      <input type="text" id="areaInput" placeholder="Type area..." />
+      <div id="areaSuggestions" class="suggestions"></div>
 
-        <!--Step3: Select Destination--> 
-        <div> 
-          <label for="selectDestination">Select Destination</label> 
-          <select id="selectDestination"> 
-            <!--JSON file will be appended here--> 
-          </select> 
-        </div> 
-      </div> 
+      <label>Select Destination</label>
+      <input
+        type="text"
+        id="destInput"
+        placeholder="Type destination..."
+        disabled
+      />
+      <div id="destSuggestions" class="suggestions"></div>
 
-        <!--TimeTable Of The available Buses--> 
-        <div class="card" id="timetable"> 
-          <h3 class="heads">List Of Available Bus</h3> 
-          <ul id="output"> 
-              <!--List of available buses will be shown here--> 
-          </ul>
-        </div>
-      </div> 
+      <button id="findBtn">Find Buses</button>
 
-      <!--Map showing Live Location--> 
-      <section> 
-        <h3 class="heads">Bus Live Location</h3> 
-      </section> 
-    </main> 
+      <ul id="busList"></ul>
+    </div>
+
+    <section>
+      <h3 class="heads">Bus Live Location</h3>
+    </section>
+
     <script src="js/timeTable.js"></script>
-  </body> 
- </html>
+  </body>
+</html>
