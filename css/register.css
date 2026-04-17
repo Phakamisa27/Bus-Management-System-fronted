@@ -1,85 +1,94 @@
+:root {
+  --primary: #1e73ff;
+  --secondary: #ffffff;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  font-family: system-ui, Arial;
-  color: var(--text-light);
+  min-height: 100vh;
+  background: var(--primary);
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  color: var(--primary);
 }
 
 .container {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 30px;
-  width: 350px;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
+  width: 100%;
+  max-width: 360px;
+  background: var(--secondary);
+  padding: 2rem;
+  border-radius: 12px;
 }
 
 h2 {
+  color: var(--primary);
   text-align: center;
-  font-size: 26px;
-  margin-top: 0;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fbfbfc;
-  color: var(--text-light);
-  font-size: 15px;
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  color: var(--primary);
+  background: var(--secondary);
+  font-size: 0.95rem;
+}
+
+input:last-of-type {
+  margin-bottom: 0;
 }
 
 input:focus {
-  outline: 1px solid var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary);
 }
 
 button {
   width: 100%;
-  padding: 12px;
+  padding: 0.75rem;
+  margin-top: 1rem;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(180deg, var(--button1), var(--button2));
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
+  border-radius: 8px;
+  background: var(--primary);
+  color: var(--secondary);
   cursor: pointer;
-  margin-top: 12px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 p {
   text-align: center;
-  margin-top: 15px;
-  color: var(--muted);
-  font-size: 14px;
+  margin-top: 1.25rem;
+  color: var(--primary);
+  font-size: 0.95rem;
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
+  color: var(--primary);
   font-weight: 600;
+  text-decoration: none;
 }
 
 a:hover {
