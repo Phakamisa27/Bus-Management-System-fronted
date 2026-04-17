@@ -4,11 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select Your Router</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="css/timeTable.css" />
   </head>
   <body>
     <header class="route">
+      <button
+        class="header-icon-btn back-btn"
+        type="button"
+        aria-label="Go back"
+        onclick="goBack('dashBroad.html')"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M14.5 5.5L8 12l6.5 6.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
       <h2>Select Your Route</h2>
+      <button class="header-icon-btn menu-btn" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M5 7h14M5 12h14M5 17h14"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
     </header>
 
     <div class="container">
@@ -33,9 +65,46 @@
     </div>
 
     <section>
-      <h3 class="heads">Bus Live Location</h3>
+      <h3 class="heads">Live Location</h3>
+    </section>
+    <section class="live-section">
+      <div id="trackingPopup" class="tracking-popup" role="alert">
+        Your location helps track this bus for all passengers.
+      </div>
+
+      <div id="trackingPanel" class="tracking-panel hidden">
+        <div class="status-row">
+          <span id="trackingDot" class="status-dot"></span>
+          <span id="trackingText">Tracking inactive</span>
+        </div>
+        <p id="helpText" class="help-text"></p>
+        <p id="lastUpdateText" class="last-update-text">Last update: never</p>
+        <button id="shareBtn" class="timetable-btn" disabled>
+          Start Sharing Location
+        </button>
+        <button id="waitingBtn" class="secondary-btn" disabled>
+          I Am Waiting Here
+        </button>
+        <p id="waitingInfo" class="waiting-info"></p>
+      </div>
+
+      <div id="busStatusText" class="bus-status-text">
+        Select a bus to view map
+      </div>
+      <div id="map" class="bus-map" aria-label="Live bus map"></div>
+      <p id="arrivalText" class="arrival-text">Arrival estimate unavailable.</p>
     </section>
 
+    <script>
+      function goBack(fallbackPage) {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+        window.location.href = fallbackPage;
+      }
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/timeTable.js"></script>
   </body>
 </html>

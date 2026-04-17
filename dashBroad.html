@@ -13,7 +13,35 @@
   <body>
     <!--HEADER-->
     <header class="appbar">
+      <button
+        class="header-icon-btn back-btn"
+        type="button"
+        aria-label="Go back"
+        onclick="goBack('companies.html')"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M14.5 5.5L8 12l6.5 6.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
       <h2>Bus Companies</h2>
+      <button class="header-icon-btn menu-btn" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M5 7h14M5 12h14M5 17h14"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
     </header>
 
     <!--FULL -WIDTH HERO-->
@@ -26,20 +54,29 @@
           >View TimeTable</a
         >
       </div>
-
-      <!--CARD 2-->
+      <!--
       <div class="card">
         <h3>Hello, Passenger!</h3>
         <p>Planning to buy your bus trips early?</p>
         <a href="buyNow.html" class="cta" id="buyNow">Check Here</a>
       </div>
 
-      <!--CARD 3-->
+      
       <div class="card">
         <h3>Contact Information</h3>
         <p>Help Available</p>
         <a href="contact.html" class="cta" id="contact">Contact</a>
       </div>
+     -->
     </section>
+    <script>
+      function goBack(fallbackPage) {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+        window.location.href = fallbackPage;
+      }
+    </script>
   </body>
 </html>
