@@ -30,70 +30,57 @@
         </svg>
       </button>
       <h2>Select Your Route</h2>
-      <button class="header-icon-btn menu-btn" type="button" aria-label="Menu">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M5 7h14M5 12h14M5 17h14"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.2"
-            stroke-linecap="round"
-          />
-        </svg>
-      </button>
     </header>
 
-    <div class="container">
-      <h2>Select Your Route</h2>
+    <main class="page-main">
+      <div class="container route-panel">
+        <h2 class="route-panel__title">Select Your Route</h2>
 
-      <label>Select Area</label>
-      <input type="text" id="areaInput" placeholder="Type area..." />
-      <div id="areaSuggestions" class="suggestions"></div>
+        <label>Select Area</label>
+        <input type="text" id="areaInput" placeholder="Type area..." />
+        <div id="areaSuggestions" class="suggestions"></div>
 
-      <label>Select Destination</label>
-      <input
-        type="text"
-        id="destInput"
-        placeholder="Type destination..."
-        disabled
-      />
-      <div id="destSuggestions" class="suggestions"></div>
+        <label>Select Destination</label>
+        <input
+          type="text"
+          id="destInput"
+          placeholder="Type destination..."
+          disabled
+        />
+        <div id="destSuggestions" class="suggestions"></div>
 
-      <button id="findBtn">Find Buses</button>
+        <button id="findBtn">Find Buses</button>
 
-      <ul id="busList"></ul>
-    </div>
-
-    <section>
-      <h3 class="heads">Live Location</h3>
-    </section>
-    <section class="live-section">
-      <div id="trackingPopup" class="tracking-popup" role="alert">
-        Your location helps track this bus for all passengers.
+        <ul id="busList"></ul>
       </div>
 
-      <div id="trackingPanel" class="tracking-panel hidden">
-        <div class="status-row">
-          <span id="trackingDot" class="status-dot"></span>
-          <span id="trackingText">Tracking inactive</span>
+      <section class="live-heading" aria-labelledby="live-location-heading">
+        <h3 id="live-location-heading" class="heads">Live Location</h3>
+      </section>
+      <section class="live-section">
+        <div id="trackingPopup" class="tracking-popup" role="alert">
+          Your location helps track this bus for all passengers.
         </div>
-        <p id="helpText" class="help-text"></p>
-        <p id="lastUpdateText" class="last-update-text">Last update: never</p>
-        <button id="shareBtn" class="timetable-btn" disabled>
-          Start Sharing Location
-        </button>
-        <button id="waitingBtn" class="secondary-btn" disabled>
-          I Am Waiting Here
-        </button>
-        <p id="waitingInfo" class="waiting-info"></p>
-      </div>
 
-      <div id="busStatusText" class="bus-status-text">
-        Select a bus to view map
-      </div>
-      <div id="map" class="bus-map" aria-label="Live bus map"></div>
-      <p id="arrivalText" class="arrival-text">Arrival estimate unavailable.</p>
-    </section>
+        <div id="trackingPanel" class="tracking-panel hidden">
+          <div class="status-row">
+            <span id="trackingDot" class="status-dot"></span>
+            <span id="trackingText">Tracking inactive</span>
+          </div>
+          <p id="helpText" class="help-text"></p>
+          <p id="lastUpdateText" class="last-update-text">Last update: never</p>
+          <button id="shareBtn" class="timetable-btn" disabled>
+            Start Sharing Location
+          </button>
+        </div>
+
+        <div id="busStatusText" class="bus-status-text">
+          Select a bus to view map
+        </div>
+        <div id="map" class="bus-map" aria-label="Live bus map"></div>
+        <p id="arrivalText" class="arrival-text">Arrival estimate unavailable.</p>
+      </section>
+    </main>
 
     <script>
       function goBack(fallbackPage) {
@@ -105,6 +92,7 @@
       }
     </script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/liveTracking.js"></script>
     <script src="js/timeTable.js"></script>
   </body>
 </html>

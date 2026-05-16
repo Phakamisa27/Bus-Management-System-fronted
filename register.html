@@ -10,13 +10,46 @@
     <div class="container">
       <h2>Create Account</h2>
 
-      <form action="login.html" method="POST">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="password" placeholder="Password" required />
-        <input type="password" placeholder="Confirm Password" required />
+      <form id="registerForm" novalidate>
+        <input
+          id="fullName"
+          type="text"
+          placeholder="Full Name"
+          required
+          autocomplete="name"
+        />
+        <input
+          id="email"
+          type="email"
+          placeholder="Email Address"
+          required
+          autocomplete="email"
+        />
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          required
+          autocomplete="new-password"
+        />
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+          required
+          autocomplete="new-password"
+        />
 
         <button type="submit">Register</button>
+        <p
+          id="registerStatus"
+          style="
+            margin-top: 0.75rem;
+            text-align: center;
+            font-size: 0.9rem;
+            word-break: break-word;
+          "
+        ></p>
       </form>
 
       <p>
@@ -24,5 +57,6 @@
         <a href="login.html">Log in</a>
       </p>
     </div>
+    <script src="js/register.js"></script>
   </body>
 </html>

@@ -1,0 +1,241 @@
+/**
+ * Login flow:
+ *   POST {BACKEND_URL}/auth/login  { email, password }
+ *   -> stores access_token in localStorage and redirects to the dashboard.
+ *
+ * BACKEND_URL is read from window.LiveBusTracking when available so all
+ * pages stay in sync; otherwise falls back to the ngrok backend tunnel.
+ */
+(function () {
+  "use strict";
+
+  const BACKEND_URL =
+    (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
+    "http://127.0.0.1:8000";
+
+  const REDIRECT_AFTER_LOGIN = "companies.html";
+
+  console.log("[login] BACKEND_URL =", BACKEND_URL);
+  console.log(
+    "[login] Sanity check: open this in a new tab — you should see FastAPI Swagger UI:",
+    `${BACKEND_URL}/docs`,
+  );
+
+  function showStatus(msg, isError) {
+    const el = document.getElementById("loginStatus");
+    if (!el) return;
+    el.textContent = msg;
+    el.style.color = isError ? "#c0392b" : "#1e73ff";
+  }
+
+  async function probeBackend() {
+    const url = `${BACKEND_URL}/openapi.json`;
+    try {
+      const res = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "ngrok-skip-browser-warning": "true",
+        },
+      });
+      const text = await res.text();
+      if (!res.ok) {
+        console.error(
+          "[login] Backend probe failed:",
+          res.status,
+          res.statusText,
+          "body:",
+          text.slice(0, 200),
+        );
+        showStatus(
+          `Wrong BACKEND_URL? GET ${url} returned ${res.status} ${res.statusText}. ` +
+            `Make sure it is the ngrok tunnel forwarding to FastAPI (localhost:8000).`,
+          true,
+        );
+        return;
+      }
+      const looksLikeOpenApi =
+        text.includes('"openapi"') || text.includes("openapi");
+      if (!looksLikeOpenApi) {
+        console.error(
+          "[login] /openapi.json did not look like FastAPI. Body:",
+          text.slice(0, 200),
+        );
+        showStatus(
+          `BACKEND_URL is probably the FRONTEND tunnel, not FastAPI. ` +
+            `GET ${url} returned non-OpenAPI content.`,
+          true,
+        );
+        return;
+      }
+      console.log("[login] Backend probe OK — FastAPI reachable at", BACKEND_URL);
+    } catch (err) {
+      console.error("[login] Backend probe network error:", err, "URL:", url);
+      showStatus(
+        `Cannot reach backend at ${BACKEND_URL}. ` +
+          `Check the ngrok URL and CORS. (${err.message || err})`,
+        true,
+      );
+    }
+  }
+
+  async function handleLogin(event) {
+    event.preventDefault();
+
+    const emailEl = document.getElementById("email");
+    const passwordEl = document.getElementById("password");
+    const submitBtn = event.target.querySelector('button[type="submit"]');
+
+    const email = (emailEl && emailEl.value || "").trim();
+    const password = (passwordEl && passwordEl.value) || "";
+
+    if (!email || !password) {
+      showStatus("Enter email and password.", true);
+      return;
+    }
+
+    if (submitBtn) submitBtn.disabled = true;
+    showStatus("Signing in...", false);
+
+    const url = `${BACKEND_URL}/auth/login`;
+    console.log("[login] POST URL:", url);
+
+    let res;
+    try {
+      res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "ngrok-skip-browser-warning": "true",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+    } catch (err) {
+      console.error("[login] Network error:", err, "URL:", url);
+      showStatus(`Network error: ${err.message || err}`, true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    let bodyText = "";
+    try {
+      bodyText = await res.text();
+    } catch (readErr) {
+      console.warn("[login] Could not read response body:", readErr);
+    }
+    console.log("[login] response:", res.status, res.statusText, "body:", bodyText);
+
+    if (!res.ok) {
+      const excerpt = (bodyText || "").slice(0, 200) || "(empty body)";
+      let msg = `Login failed: ${res.status} ${res.statusText} — ${excerpt}`;
+      if (res.status === 405) {
+        msg +=
+          ` — 405 usually means BACKEND_URL (${BACKEND_URL}) is the FRONTEND ngrok, ` +
+          `not FastAPI. Open ${BACKEND_URL}/docs to verify; it should show Swagger UI.`;
+      } else if (res.status === 404) {
+        msg +=
+          ` — 404 means /auth/login does not exist at ${BACKEND_URL}. ` +
+          `Confirm BACKEND_URL points to FastAPI (localhost:8000).`;
+      }
+      console.error("[login]", msg);
+      showStatus(msg, true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    let data = {};
+    try {
+      data = bodyText ? JSON.parse(bodyText) : {};
+    } catch (parseErr) {
+      console.error("[login] Could not parse JSON response:", parseErr);
+      showStatus("Login response was not valid JSON.", true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    const token = data.access_token || data.token;
+    if (!token) {
+      console.error(
+        "[login] Login response missing access_token / token:",
+        data,
+      );
+      showStatus("Login response did not include a token.", true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    localStorage.setItem("access_token", token);
+    console.log("Login successful, token saved");
+    showStatus("Login successful. Redirecting...", false);
+
+    window.location.href = REDIRECT_AFTER_LOGIN;
+  }
+
+  const EYE_OPEN_SVG =
+    '<svg class="pw-icon pw-eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>' +
+    '<circle cx="12" cy="12" r="3"/>' +
+    "</svg>";
+
+  const EYE_CLOSED_SVG =
+    '<svg class="pw-icon pw-eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M17.94 17.94A10.94 10.94 0 0112 19c-6.5 0-10-7-10-7a19.6 19.6 0 014.22-5.22"/>' +
+    '<path d="M9.9 4.24A10.94 10.94 0 0112 4c6.5 0 10 7 10 7a19.6 19.6 0 01-3.17 4.19"/>' +
+    '<path d="M9.88 9.88a3 3 0 104.24 4.24"/>' +
+    '<line x1="3" y1="3" x2="21" y2="21"/>' +
+    "</svg>";
+
+  function initPasswordToggles(root) {
+    const scope = root || document;
+    const inputs = scope.querySelectorAll('input[type="password"]');
+    inputs.forEach((input) => {
+      if (input.dataset.pwToggleAttached === "1") return;
+
+      const wrap = document.createElement("div");
+      wrap.className = "pw-wrap";
+      input.parentNode.insertBefore(wrap, input);
+      wrap.appendChild(input);
+
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "pw-toggle";
+      btn.setAttribute("aria-label", "Show password");
+      btn.setAttribute("aria-pressed", "false");
+      btn.innerHTML = EYE_OPEN_SVG + EYE_CLOSED_SVG;
+      wrap.appendChild(btn);
+
+      btn.addEventListener("click", () => {
+        const willShow = input.type === "password";
+        input.type = willShow ? "text" : "password";
+        btn.classList.toggle("is-showing", willShow);
+        btn.setAttribute("aria-pressed", willShow ? "true" : "false");
+        btn.setAttribute(
+          "aria-label",
+          willShow ? "Hide password" : "Show password",
+        );
+      });
+
+      input.dataset.pwToggleAttached = "1";
+    });
+  }
+
+  function init() {
+    initPasswordToggles();
+
+    const form = document.querySelector("form");
+    if (!form) {
+      console.error("[login] No <form> found on the page.");
+      return;
+    }
+    form.addEventListener("submit", handleLogin);
+
+    probeBackend();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
