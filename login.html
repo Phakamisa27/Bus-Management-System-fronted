@@ -152,7 +152,8 @@
         margin: 0;
       }
 
-      .pw-wrap input[type="password"]::-webkit-strong-password-auto-fill-button {
+      .pw-wrap
+        input[type="password"]::-webkit-strong-password-auto-fill-button {
         display: none !important;
         visibility: hidden;
         pointer-events: none;
@@ -162,6 +163,7 @@
       }
     </style>
   </head>
+
   <body>
     <div class="login-card">
       <h1>Login</h1>
@@ -189,7 +191,12 @@
         <button type="submit">Sign In</button>
         <p
           id="loginStatus"
-          style="margin-top: 0.75rem; text-align: center; font-size: 0.9rem; word-break: break-word;"
+          style="
+            margin-top: 0.75rem;
+            text-align: center;
+            font-size: 0.9rem;
+            word-break: break-word;
+          "
         ></p>
         <a href="register.html">register here</a>
       </form>
