@@ -13,7 +13,7 @@ fetch("data/companies.json")
       //when user select company
       card.onclick = () => {
         localStorage.setItem("selectCompany", company.name);
-        window.location.href = "dashbroad.html";
+        window.location.href = "dashBroad.html";
       };
       grid.appendChild(card);
     });

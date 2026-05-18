@@ -11,7 +11,7 @@
 
   const BACKEND_URL =
     (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    "http://127.0.0.1:8000";
+    "https://bus-management-system-backend.onrender.com";
 
   const REDIRECT_AFTER_LOGIN = "companies.html";
 
@@ -68,7 +68,10 @@
         );
         return;
       }
-      console.log("[login] Backend probe OK — FastAPI reachable at", BACKEND_URL);
+      console.log(
+        "[login] Backend probe OK — FastAPI reachable at",
+        BACKEND_URL,
+      );
     } catch (err) {
       console.error("[login] Backend probe network error:", err, "URL:", url);
       showStatus(
@@ -86,7 +89,7 @@
     const passwordEl = document.getElementById("password");
     const submitBtn = event.target.querySelector('button[type="submit"]');
 
-    const email = (emailEl && emailEl.value || "").trim();
+    const email = ((emailEl && emailEl.value) || "").trim();
     const password = (passwordEl && passwordEl.value) || "";
 
     if (!email || !password) {
@@ -124,7 +127,13 @@
     } catch (readErr) {
       console.warn("[login] Could not read response body:", readErr);
     }
-    console.log("[login] response:", res.status, res.statusText, "body:", bodyText);
+    console.log(
+      "[login] response:",
+      res.status,
+      res.statusText,
+      "body:",
+      bodyText,
+    );
 
     if (!res.ok) {
       const excerpt = (bodyText || "").slice(0, 200) || "(empty body)";

@@ -9,7 +9,7 @@
 (function () {
   "use strict";
 
-  var BACKEND_URL = "http://127.0.0.1:8000";
+  var BACKEND_URL = "https://bus-management-system-backend.onrender.com";
   var POLL_MS = 5000;
   // A bus is considered "currently shared" only if its latest fix is no older
   // than this. Anything older is treated the same as "no one is sharing".

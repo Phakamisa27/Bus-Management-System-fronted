@@ -4,9 +4,9 @@
 // NOT the frontend tunnel that serves index.html.
 const BACKEND_URL =
   (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-  "http://127.0.0.1:8000";
+  "https://bus-management-system-backend.onrender.com";
 
-console.log("[timeTable] BACKEND_URL =", BACKEND_URL);
+https: console.log("[timeTable] BACKEND_URL =", BACKEND_URL);
 console.log(
   "[timeTable] page origin =",
   window.location.origin,

@@ -12,7 +12,7 @@
 
   const BACKEND_URL =
     (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    "http://127.0.0.1:8000";
+    "https://bus-management-system-backend.onrender.com";
 
   const REDIRECT_AFTER_REGISTER = "login.html";
 
@@ -180,7 +180,7 @@
 
     const form = document.getElementById("registerForm");
     if (!form) {
-      console.error("[register] No <form id=\"registerForm\"> found.");
+      console.error('[register] No <form id="registerForm"> found.');
       return;
     }
     form.addEventListener("submit", handleRegister);
