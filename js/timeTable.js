@@ -65,7 +65,7 @@ const helpText = document.getElementById("helpText");
 const lastUpdateText = document.getElementById("lastUpdateText");
 const busStatusText = document.getElementById("busStatusText");
 const popup = document.getElementById("trackingPopup");
-const arrivalText = document.getElementById("arrivalText");
+//const arrivalText = document.getElementById("arrivalText");
 
 //Step4: ---- State ----
 // Bus marker on the map lives in liveTracking.js (LiveBusTracking.getBusMarker()).
@@ -160,13 +160,13 @@ function ensureMap() {
 
 function updateArrivalEstimate() {
   if (!map || !selectedBus || !lastServerLocation) {
-    arrivalText.textContent = "Arrival estimate unavailable.";
+    //arrivalText.textContent = "Arrival estimate unavailable.";
     return;
   }
 
   const target = selectedBus.stopLatLng;
   if (!target) {
-    arrivalText.textContent = "Arrival estimate unavailable.";
+    //arrivalText.textContent = "Arrival estimate unavailable.";
     return;
   }
 
@@ -410,7 +410,7 @@ window.addEventListener("livebus:no-location", () => {
   lastServerLocation = null;
   busStatusText.textContent =
     "There is no one sharing location on this bus. Please share location.";
-  arrivalText.textContent = "Arrival estimate unavailable.";
+  //arrivalText.textContent = "Arrival estimate unavailable.";
 });
 
 window.addEventListener("livebus:error", (e) => {
@@ -440,7 +440,7 @@ function selectBus(bus, area, destination, index) {
     stopLatLng: null,
   };
   lastServerLocation = null;
-  arrivalText.textContent = "Arrival estimate unavailable.";
+  //arrivalText.textContent = "Arrival estimate unavailable.";
 
   trackingPanel.classList.remove("hidden");
   shareBtn.disabled = false;
