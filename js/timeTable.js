@@ -65,7 +65,7 @@ const helpText = document.getElementById("helpText");
 const lastUpdateText = document.getElementById("lastUpdateText");
 const busStatusText = document.getElementById("busStatusText");
 const popup = document.getElementById("trackingPopup");
-//const arrivalText = document.getElementById("arrivalText");
+const arrivalText = document.getElementById("arrivalText");
 
 //Step4: ---- State ----
 // Bus marker on the map lives in liveTracking.js (LiveBusTracking.getBusMarker()).
