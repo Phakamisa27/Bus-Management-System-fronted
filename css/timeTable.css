@@ -342,7 +342,6 @@ button:not(:disabled):active {
 
 .help-text,
 .last-update-text,
-.arrival-text,
 .bus-status-text {
   margin: 0;
   font-size: 14px;
