@@ -67,8 +67,8 @@ header.route h2 {
 }
 
 .header-icon-btn svg {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
 }
 
 .header-icon-btn:hover {
@@ -440,8 +440,8 @@ button:not(:disabled):active {
   }
 
   .header-icon-btn svg {
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 36px;
   }
 
   .page-main {
