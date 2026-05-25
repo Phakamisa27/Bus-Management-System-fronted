@@ -1,0 +1,15 @@
+# Environment variables / secrets
+.env
+
+# VS Code personal settings
+.vscode/
+
+# log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Future use(if you start using npm/React)
+node_modules/
