@@ -2,34 +2,22 @@
   "Umlazi-1-F&G": {
     "Westmead": [
       {
-        "route": "201",
-        "time": "07:00",
+        "route": "200",
+        "time": "14:00",
         "destination": "Umlazi-1-F&G to Westmead",
         "bus_id": "5e1c3169-a012-44d9-a18c-561f0fff3a10"
+      },
+      {
+        "route": "201",
+        "time": "15:00",
+        "destination": "Umlazi-1-F&G to Westmead",
+        "bus_id": "cb02bb3f-97f2-4ef5-8c17-338e61e4fd7d"
       },
       {
         "route": "202",
-        "time": "08:00",
+        "time": "16:00",
         "destination": "Umlazi-1-F&G to Westmead",
-        "bus_id": "5e1c3169-a012-44d9-a18c-561f0fff3a10"
-      },
-      {
-        "route": "203",
-        "time": "09:00",
-        "destination": "Umlazi-1-F&G to Westmead",
-        "bus_id": "5e1c3169-a012-44d9-a18c-561f0fff3a10"
-      },
-      {
-        "route": "204",
-        "time": "10:00",
-        "destination": "Umlazi-1-F&G to Westmead",
-        "bus_id": "5e1c3169-a012-44d9-a18c-561f0fff3a10"
-      },
-      {
-        "route": "205",
-        "time": "11:00",
-        "destination": "Umlazi-1-F&G to Westmead",
-        "bus_id": "5e1c3169-a012-44d9-a18c-561f0fff3a10"
+        "bus_id": "8f0358df-68a1-49bb-a9f9-6079c91324e7"
       }
     ]
   },

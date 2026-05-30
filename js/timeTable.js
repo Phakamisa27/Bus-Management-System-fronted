@@ -402,11 +402,16 @@ window.addEventListener("livebus:location", (e) => {
   updateArrivalEstimate();
 });
 
+// Fired by liveTracking.js when the route's channel has no fresh GPS:
+//   - the backend returned 404 (no location ever recorded for this bus_id), or
+//   - the latest fix is older than the staleness threshold, or
+//   - the latest fix is the (0, 0) sentinel.
+// Each timetable card has its own bus_id, so this message only appears for
+// the selected route — other routes are unaffected.
 window.addEventListener("livebus:no-location", () => {
   if (!selectedBus) return;
   lastServerLocation = null;
-  busStatusText.textContent =
-    "There is no one sharing location on this bus. Please share location.";
+  busStatusText.textContent = "There is no one sharing location.";
 });
 
 window.addEventListener("livebus:error", (e) => {
@@ -496,8 +501,9 @@ findBtn.onclick = () => {
           "This bus is not configured for live tracking.";
         return;
       }
-      // Always carry the id read from the clicked card. No fallback, no
-      // sharing of ids across cards.
+      // The bus_id read from THIS card is the route's tracking channel.
+      // Sharing or viewing only affects this id, so two cards with different
+      // bus_ids are fully independent.
       selectBus({ ...bus, bus_id: id }, area, dest, index);
     });
     busList.appendChild(li);

@@ -2,9 +2,25 @@
  * Single Leaflet map instance + polling for live bus location.
  * Loads after Leaflet; exposes window.LiveBusTracking.
  *
- * The bus id is NOT hard-coded. Call:
+ * Per-route tracking model
+ * ------------------------
+ * Each timetable card in data/timeTable.json carries its own `bus_id`.
+ * That id is the "tracking channel" for one specific route:
+ *
+ *   - Sharer:  POST /buses/{bus_id}/location          (timeTable.js)
+ *   - Viewer:  GET  /buses/{bus_id}/location every 5s (this file)
+ *
+ * Two cards with different bus_ids are completely independent — sharing
+ * GPS for route A never shows up on route B, and vice versa.
+ *
+ * The bus id is NOT hard-coded here. Call:
  *   LiveBusTracking.setBusId("<uuid>")
- * to start tracking a specific bus. Polling runs every POLL_MS.
+ * to switch the channel. Switching clears the marker and restarts polling
+ * so we never display a stale point from the previous route.
+ *
+ * Empty state: if the backend returns 404, or the latest fix is older than
+ * STALE_THRESHOLD_MS, or the coords are (0, 0), we fire `livebus:no-location`
+ * and timeTable.js shows "There is no one sharing location."
  */
 (function () {
   "use strict";
