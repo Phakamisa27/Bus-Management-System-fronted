@@ -25,6 +25,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        opacity: 1;
+        transition: opacity 1s ease;
       }
 
       .centered-text h1 {
@@ -33,6 +36,10 @@
         margin: 0;
         letter-spacing: 1.5px;
       }
+
+      .fade-out {
+        opacity: 0;
+      }
     </style>
   </head>
 
@@ -40,5 +47,14 @@
     <div class="centered-text">
       <h1>BUS COMPANIES</h1>
     </div>
+    <script>
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+
+        setTimeout(() => {
+          window.location.href = "./login.html";
+        }, 1000);
+      }, 3000);
+    </script>
   </body>
 </html>
