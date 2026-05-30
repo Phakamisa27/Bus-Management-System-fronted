@@ -107,6 +107,13 @@ h1 {
   box-shadow: 0 0 0 4px var(--focus-ring);
 }
 
+.login-status {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
 .form-meta {
   margin-top: 4px;
   display: flex;
