@@ -39,6 +39,7 @@
   var pollTimer = null;
   var routeLabel = "Live bus";
   var currentBusId = null;
+  var resizeTimer = null;
 
   function logError(context, err) {
     console.error("[LiveBusTracking]", context, err != null ? err : "");
@@ -74,20 +75,22 @@
     requestAnimationFrame(animate);
   }
 
-  function fixDefaultMarkerIcon() {
-    if (!window.L || !L.Icon || !L.Icon.Default) return;
-    try {
-      delete L.Icon.Default.prototype._getIconUrl;
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl:
-          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-        shadowUrl:
-          "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-      });
-    } catch (e) {
-      logError("Failed to patch default marker icon", e);
-    }
+  // Custom bus pin marker: a blue map pin with a white bus icon inside.
+  // Built lazily (Leaflet must be loaded first) and cached. The bottom tip of
+  // the pin (at 24,46 in the SVG's 48x48 viewBox) is the anchor, so it points
+  // exactly at the bus's coordinates.
+  var busIcon = null;
+  function getBusIcon() {
+    if (!window.L) return null;
+    if (busIcon) return busIcon;
+    busIcon = L.icon({
+      iconUrl: "assets/bus-pin.svg",
+      iconSize: [48, 48],
+      iconAnchor: [24, 46],
+      popupAnchor: [0, -46],
+      className: "bus-pin-marker",
+    });
+    return busIcon;
   }
 
   function ensureMap() {
@@ -102,8 +105,6 @@
       logError("Map container #map not found.");
       return null;
     }
-
-    fixDefaultMarkerIcon();
 
     try {
       map = L.map("map").setView(DEFAULT_VIEW, DEFAULT_ZOOM);
@@ -127,6 +128,25 @@
 
     return map;
   }
+
+  // Keep the map correctly sized as the viewport changes (orientation change,
+  // window resize, mobile browser chrome show/hide). Leaflet needs an explicit
+  // invalidateSize() after its container changes dimensions, otherwise tiles
+  // and the marker can be misaligned. Debounced so we don't thrash on drag.
+  function handleResize() {
+    if (!map) return;
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      try {
+        map.invalidateSize();
+      } catch (invErr) {
+        logError("invalidateSize on resize failed", invErr);
+      }
+    }, 150);
+  }
+
+  window.addEventListener("resize", handleResize);
+  window.addEventListener("orientationchange", handleResize);
 
   function setRouteLabel(label) {
     routeLabel = label || "Live bus";
@@ -241,7 +261,9 @@
 
     try {
       if (!busMarker) {
-        busMarker = L.marker(latLng).addTo(m).bindPopup(routeLabel);
+        busMarker = L.marker(latLng, { icon: getBusIcon() })
+          .addTo(m)
+          .bindPopup(routeLabel);
         console.log(
           "[LiveBusTracking] marker created at",
           lat,

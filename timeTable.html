@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select Your Router</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
     <link rel="stylesheet" href="css/timeTable.css" />
   </head>
   <body>
@@ -52,33 +48,8 @@
         <button id="findBtn">Find Buses</button>
 
         <ul id="busList"></ul>
+        <p id="busListStatus" class="bus-status-text" role="status"></p>
       </div>
-
-      <section class="live-heading" aria-labelledby="live-location-heading">
-        <h3 id="live-location-heading" class="heads">Live Location</h3>
-      </section>
-      <section class="live-section">
-        <div id="trackingPopup" class="tracking-popup" role="alert">
-          Your location helps track this bus for all passengers.
-        </div>
-
-        <div id="trackingPanel" class="tracking-panel hidden">
-          <div class="status-row">
-            <span id="trackingDot" class="status-dot"></span>
-            <span id="trackingText">Tracking inactive</span>
-          </div>
-          <p id="helpText" class="help-text"></p>
-          <p id="lastUpdateText" class="last-update-text">Last update: never</p>
-          <button id="shareBtn" class="timetable-btn" disabled>
-            Start Sharing Location
-          </button>
-        </div>
-
-        <div id="busStatusText" class="bus-status-text">
-          Select a bus to view map
-        </div>
-        <div id="map" class="bus-map" aria-label="Live bus map"></div>
-      </section>
     </main>
 
     <script>
@@ -90,8 +61,6 @@
         window.location.href = fallbackPage;
       }
     </script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/liveTracking.js"></script>
     <script src="js/timeTable.js"></script>
   </body>
 </html>
