@@ -17,52 +17,61 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--primary);
+  padding: 1.5rem;
 }
 
 .container {
   width: 100%;
-  max-width: 360px;
+  max-width: 420px;
   background: var(--secondary);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 3rem 2.75rem;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
 }
 
 h2 {
   color: var(--primary);
   text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.75rem;
+  margin-bottom: 2.25rem;
+  font-size: 1.9rem;
   font-weight: 700;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 input {
   width: 100%;
-  padding: 0.7rem 0.8rem;
-  border: 1px solid var(--primary);
-  border-radius: 8px;
+  padding: 0.6rem 0.2rem;
+  border: none;
+  border-bottom: 2px solid rgba(30, 115, 255, 0.35);
+  border-radius: 0;
   color: var(--primary);
-  background: var(--secondary);
-  font-size: 0.95rem;
+  background: transparent;
+  font-size: 1rem;
   line-height: 1.25;
+  transition: border-color 0.2s ease;
+}
+
+input::placeholder {
+  color: rgba(30, 115, 255, 0.45);
 }
 
 input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--primary);
+  border-bottom-color: var(--primary);
+  box-shadow: none;
 }
 
 button {
   width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.25rem;
+  padding: 0.85rem;
+  margin-top: 0.5rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--primary);
   color: var(--secondary);
   cursor: pointer;
@@ -76,9 +85,16 @@ button:hover {
 
 p {
   text-align: center;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
   color: var(--primary);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+}
+
+.registerStatus {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  word-break: break-word;
 }
 
 a {
@@ -175,4 +191,20 @@ a:hover {
   height: 0;
   width: 0;
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.75rem;
+  }
 }
