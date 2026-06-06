@@ -9,9 +9,12 @@
 (function () {
   "use strict";
 
+  // Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
+  const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
+  const LOCAL_BACKEND_URL = "http://localhost:8000";
   const BACKEND_URL =
     (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
+    LOCAL_BACKEND_URL;
 
   const REDIRECT_AFTER_LOGIN = "companies.html";
 

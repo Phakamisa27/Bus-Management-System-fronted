@@ -5,9 +5,12 @@
 // hand it to LiveBusTracking, so each bus opens its own independent map and
 // never reuses another bus's location.
 
+// Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
+const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
+const LOCAL_BACKEND_URL = "http://localhost:8000";
 const BACKEND_URL =
   (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-  "https://bus-management-system-backend.onrender.com";
+  LOCAL_BACKEND_URL;
 
 const NO_LOCATION_MESSAGE =
   "No one is currently sharing the location of this bus.";

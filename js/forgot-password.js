@@ -1,24 +1,26 @@
 /**
  * Forgot-password flow:
- *   POST {API_BASE_URL}/auth/forgot-password  { email }
+ *   POST {BACKEND_URL}/auth/forgot-password  { email }
  *   -> always shows a neutral confirmation message (no account enumeration).
  *
- * API_BASE_URL is read from window.LiveBusTracking when available so every
- * page stays in sync; otherwise it falls back to the deployed Render backend.
- * For local testing, point window.LiveBusTracking.BACKEND_URL (or the constant
- * below) at your local FastAPI server, e.g. "http://localhost:8000".
+ * BACKEND_URL is read from window.LiveBusTracking when available so every
+ * page stays in sync; otherwise it falls back to LOCAL_BACKEND_URL.
+ * For production, switch the fallback to RENDER_BACKEND_URL.
  */
 (function () {
   "use strict";
 
-  const API_BASE_URL =
+  // Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
+  const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
+  const LOCAL_BACKEND_URL = "http://localhost:8000";
+  const BACKEND_URL =
     (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
+    LOCAL_BACKEND_URL;
 
   const SUCCESS_MESSAGE =
     "If this email exists, reset instructions have been sent.";
 
-  console.log("[forgot-password] API_BASE_URL =", API_BASE_URL);
+  console.log("[forgot-password] BACKEND_URL =", BACKEND_URL);
 
   function showStatus(msg, isError) {
     const el = document.getElementById("forgotStatus");
@@ -46,7 +48,7 @@
     }
     showStatus("Sending reset link...", false);
 
-    const url = `${API_BASE_URL}/auth/forgot-password`;
+    const url = `${BACKEND_URL}/auth/forgot-password`;
     console.log("[forgot-password] POST URL:", url);
 
     let res;
