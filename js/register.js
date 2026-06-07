@@ -4,18 +4,14 @@
  *   - Submits the form to POST {BACKEND_URL}/auth/register, then redirects to
  *     login.html on success.
  *
- * BACKEND_URL is read from window.LiveBusTracking when available so all pages
- * stay in sync; otherwise falls back to the local backend.
+ * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  // Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
-  const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
-  const LOCAL_BACKEND_URL = "http://localhost:8000";
   const BACKEND_URL =
-    (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    LOCAL_BACKEND_URL;
+    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
+    "https://bus-management-system-backend.onrender.com";
 
   const REDIRECT_AFTER_REGISTER = "login.html";
 

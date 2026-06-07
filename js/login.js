@@ -3,18 +3,14 @@
  *   POST {BACKEND_URL}/auth/login  { email, password }
  *   -> stores access_token in localStorage and redirects to the dashboard.
  *
- * BACKEND_URL is read from window.LiveBusTracking when available so all
- * pages stay in sync; otherwise falls back to the ngrok backend tunnel.
+ * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  // Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
-  const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
-  const LOCAL_BACKEND_URL = "http://localhost:8000";
   const BACKEND_URL =
-    (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    LOCAL_BACKEND_URL;
+    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
+    "https://bus-management-system-backend.onrender.com";
 
   const REDIRECT_AFTER_LOGIN = "companies.html";
 
@@ -52,7 +48,7 @@
         );
         showStatus(
           `Wrong BACKEND_URL? GET ${url} returned ${res.status} ${res.statusText}. ` +
-            `Make sure it is the ngrok tunnel forwarding to FastAPI (localhost:8000).`,
+            `Make sure BACKEND_URL points to the FastAPI server.`,
           true,
         );
         return;
@@ -148,7 +144,7 @@
       } else if (res.status === 404) {
         msg +=
           ` — 404 means /auth/login does not exist at ${BACKEND_URL}. ` +
-          `Confirm BACKEND_URL points to FastAPI (localhost:8000).`;
+          `Confirm BACKEND_URL points to the FastAPI server.`;
       }
       console.error("[login]", msg);
       showStatus(msg, true);

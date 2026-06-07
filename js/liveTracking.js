@@ -25,11 +25,10 @@
 (function () {
   "use strict";
 
-  // Backend targets. Source of truth for the whole app (exposed via
-  // window.LiveBusTracking.BACKEND_URL). Switch to RENDER_BACKEND_URL for production.
-  var RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
-  var LOCAL_BACKEND_URL = "http://localhost:8000";
-  var BACKEND_URL = LOCAL_BACKEND_URL;
+  // Shared with auth pages via js/apiConfig.js; re-exposed on LiveBusTracking.
+  var BACKEND_URL =
+    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
+    "https://bus-management-system-backend.onrender.com";
   console.log("[liveTracking] BACKEND_URL =", BACKEND_URL);
   var POLL_MS = 5000;
   // A bus is considered "currently shared" only if its latest fix is no older

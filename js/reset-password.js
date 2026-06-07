@@ -7,19 +7,14 @@
  * The token is read from the URL query string, e.g.:
  *   reset-password.html?token=XYZ
  *
- * BACKEND_URL is read from window.LiveBusTracking when available so every
- * page stays in sync; otherwise it falls back to LOCAL_BACKEND_URL.
- * For production, switch the fallback to RENDER_BACKEND_URL.
+ * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  // Backend targets. Switch the fallback to RENDER_BACKEND_URL for production.
-  const RENDER_BACKEND_URL = "https://bus-management-system-backend.onrender.com";
-  const LOCAL_BACKEND_URL = "http://localhost:8000";
   const BACKEND_URL =
-    (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-    LOCAL_BACKEND_URL;
+    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
+    "https://bus-management-system-backend.onrender.com";
 
   // How long (ms) to keep the success message on screen before redirecting.
   const REDIRECT_DELAY_MS = 3000;
