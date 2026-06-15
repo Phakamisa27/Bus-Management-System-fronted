@@ -135,29 +135,19 @@
     );
 
     if (!res.ok) {
-      let errorData = {};
-
-      try {
-        errorData = bodyText ? JSON.parse(bodyText) : {};
-      } catch {
-        errorData = {};
-      }
-
-      let msg = "Login failed. Please try again.";
-
-      if (res.status === 401) {
-        msg = "wrong email or password. Please try again".;
+      const excerpt = (bodyText || "").slice(0, 200) || "(empty body)";
+      let msg = `Login failed: ${res.status} ${res.statusText} — ${excerpt}`;
+      if (res.status === 405) {
+        msg +=
+          ` — 405 usually means BACKEND_URL (${BACKEND_URL}) is the FRONTEND ngrok, ` +
+          `not FastAPI. Open ${BACKEND_URL}/docs to verify; it should show Swagger UI.`;
       } else if (res.status === 404) {
-        msg = "Login service not found.  Please check backend URL.";
-      } else if (res.status === 500) {
-        msg = "Server error. Please try again later."
-      }else if(errorData.details){
-        msg = errorData.details;
+        msg +=
+          ` — 404 means /auth/login does not exist at ${BACKEND_URL}. ` +
+          `Confirm BACKEND_URL points to the FastAPI server.`;
       }
-
       console.error("[login]", msg);
       showStatus(msg, true);
-      
       if (submitBtn) submitBtn.disabled = false;
       return;
     }

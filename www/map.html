@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Bus Location</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/timeTable.css" />
+  </head>
+  <body class="map-page">
+    <header class="route">
+      <button
+        class="header-icon-btn back-btn"
+        type="button"
+        aria-label="Go back"
+        onclick="goBack('bus-results.html')"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M14.5 5.5L8 12l6.5 6.5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <h2>Live Bus Location</h2>
+    </header>
+
+    <main class="page-main">
+      <section class="live-heading" aria-labelledby="live-location-heading">
+        <p id="busTitle" class="bus-title"></p>
+      </section>
+
+      <section class="live-section">
+        <div id="trackingPopup" class="tracking-popup" role="alert">
+          Your location helps track this bus for all passengers.
+        </div>
+
+        <div id="trackingPanel" class="tracking-panel">
+          <div class="status-row">
+            <span id="trackingDot" class="status-dot"></span>
+            <span id="trackingText">Tracking inactive</span>
+          </div>
+          <p id="helpText" class="help-text"></p>
+          <p id="lastUpdateText" class="last-update-text">Last update: never</p>
+          <button id="shareBtn" class="timetable-btn" disabled>
+            Start Sharing Location
+          </button>
+        </div>
+
+        <div id="busStatusText" class="bus-status-text">
+          Loading bus location...
+        </div>
+        <div id="map" class="bus-map" aria-label="Live bus map"></div>
+      </section>
+    </main>
+
+    <script>
+      function goBack(fallbackPage) {
+        if (window.history.length > 1) {
+          window.history.back();
+          return;
+        }
+        window.location.href = fallbackPage;
+      }
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/apiConfig.js"></script>
+    <script src="js/liveTracking.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
