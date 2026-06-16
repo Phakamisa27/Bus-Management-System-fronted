@@ -146,12 +146,12 @@
       let msg = "Login failed. Please try again.";
 
       if (res.status === 401) {
-        msg = "wrong email or password. Please try again".;
+        msg = "wrong email or password. Please try again";
       } else if (res.status === 404) {
         msg = "Login service not found.  Please check backend URL.";
       } else if (res.status === 500) {
-        msg = "Server error. Please try again later."
-      }else if(errorData.details){
+        msg = "Server error. Please try again later.";
+      } else if (errorData.details) {
         msg = errorData.details;
       }
 
