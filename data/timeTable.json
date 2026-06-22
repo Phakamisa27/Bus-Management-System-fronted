@@ -3,37 +3,37 @@
     "Westmead": {
       "Monday-Friday": [
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c01",
+          "bus_id": "89452cf7-7dbe-5cbc-a34f-fb8f346850af",
           "bus_number": "101",
           "time": "05:30",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c02",
+          "bus_id": "de86deff-b13c-57e4-8a48-3af4dae3ed10",
           "bus_number": "102",
           "time": "06:00",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c03",
+          "bus_id": "aa5f14aa-a4c3-57f6-8456-41f02b9d28d2",
           "bus_number": "103",
           "time": "06:30",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c04",
+          "bus_id": "66d19aeb-88ca-5960-b3e2-fc32a7ded322",
           "bus_number": "104",
           "time": "07:00",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c05",
+          "bus_id": "91789eba-991b-5f95-951c-d5a91a970c74",
           "bus_number": "105",
           "time": "15:00",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c06",
+          "bus_id": "f074e255-6c4b-5aad-856f-8a35051a184d",
           "bus_number": "106",
           "time": "16:00",
           "route": "Umlazi-1-F,G to Westmead"
@@ -41,13 +41,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c07",
+          "bus_id": "259631df-49fc-5453-ac89-c7bbd2f426dd",
           "bus_number": "107",
           "time": "07:00",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c08",
+          "bus_id": "fd2a5490-7401-51a5-ba28-253c7d0aa038",
           "bus_number": "108",
           "time": "15:00",
           "route": "Umlazi-1-F,G to Westmead"
@@ -55,13 +55,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c09",
+          "bus_id": "def391f2-184e-53f3-a420-3bf76279f9a8",
           "bus_number": "109",
           "time": "08:00",
           "route": "Umlazi-1-F,G to Westmead"
         },
         {
-          "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c10",
+          "bus_id": "e7f971fe-05e8-5a23-92eb-d743943204e8",
           "bus_number": "110",
           "time": "14:00",
           "route": "Umlazi-1-F,G to Westmead"
@@ -73,37 +73,37 @@
     "Westmead": {
       "Monday-Friday": [
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d01",
+          "bus_id": "9966fd39-17b8-52dc-9d6f-3db5fd8a901c",
           "bus_number": "201",
           "time": "05:40",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d02",
+          "bus_id": "5a971ba7-6765-55cf-b240-619360a9fe39",
           "bus_number": "202",
           "time": "06:10",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d03",
+          "bus_id": "aaa089d6-48dc-5b20-a25a-16636f583ed3",
           "bus_number": "203",
           "time": "06:40",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d04",
+          "bus_id": "2d889ac7-f151-50b8-a33e-eaeef8ff15b7",
           "bus_number": "204",
           "time": "07:10",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d05",
+          "bus_id": "90d404b4-1217-5928-93f6-9643521f6d17",
           "bus_number": "205",
           "time": "15:10",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d06",
+          "bus_id": "053bf104-06bb-551f-a08b-32bb43128e51",
           "bus_number": "206",
           "time": "16:10",
           "route": "Umlazi-2-M&R to Westmead"
@@ -111,13 +111,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d07",
+          "bus_id": "aa675c4e-d88e-5e7d-8462-d905f92614cf",
           "bus_number": "207",
           "time": "07:15",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d08",
+          "bus_id": "fb8c9e21-534c-5ba1-9299-b9e73107f333",
           "bus_number": "208",
           "time": "14:45",
           "route": "Umlazi-2-M&R to Westmead"
@@ -125,13 +125,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d09",
+          "bus_id": "2bd2cb1e-be49-54bf-b02f-1bda29e47103",
           "bus_number": "209",
           "time": "08:15",
           "route": "Umlazi-2-M&R to Westmead"
         },
         {
-          "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d10",
+          "bus_id": "8225cef7-447e-5219-b237-bf199dd288c2",
           "bus_number": "210",
           "time": "13:30",
           "route": "Umlazi-2-M&R to Westmead"
@@ -143,37 +143,37 @@
     "Westmead": {
       "Monday-Friday": [
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e01",
+          "bus_id": "16c21edb-ff74-5a86-8189-b086db282da1",
           "bus_number": "301",
           "time": "05:50",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e02",
+          "bus_id": "b1c941ee-87c6-531b-bfa6-4e6f5b84922f",
           "bus_number": "302",
           "time": "06:20",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e03",
+          "bus_id": "d9ccc461-19b2-5703-80de-311d04f29e05",
           "bus_number": "303",
           "time": "06:50",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e04",
+          "bus_id": "334ec26c-698f-5906-a17b-23caaac35bb2",
           "bus_number": "304",
           "time": "07:20",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e05",
+          "bus_id": "dc40d2de-00da-5d61-9032-a2a45a156db4",
           "bus_number": "305",
           "time": "15:20",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e06",
+          "bus_id": "6de45006-3988-50af-8fbf-aa6ac4ba0663",
           "bus_number": "306",
           "time": "16:20",
           "route": "Umlazi-5-U to Westmead"
@@ -181,13 +181,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e07",
+          "bus_id": "b8f71563-5359-5c67-8595-d666170880aa",
           "bus_number": "307",
           "time": "07:30",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e08",
+          "bus_id": "5a1b8a83-76f3-56ba-a8b8-9f3e4715fe68",
           "bus_number": "308",
           "time": "15:15",
           "route": "Umlazi-5-U to Westmead"
@@ -195,13 +195,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e09",
+          "bus_id": "dc71534f-a949-53c2-8ff3-c7ad00a701f1",
           "bus_number": "309",
           "time": "08:30",
           "route": "Umlazi-5-U to Westmead"
         },
         {
-          "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e10",
+          "bus_id": "80f9b19f-9b97-5a57-8cfa-c6031619eb54",
           "bus_number": "310",
           "time": "13:45",
           "route": "Umlazi-5-U to Westmead"
@@ -213,37 +213,37 @@
     "Umlazi-1-F,G": {
       "Monday-Friday": [
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f01",
+          "bus_id": "838190b3-a2ab-56b6-b025-1f1b66f9d4ba",
           "bus_number": "401",
           "time": "05:45",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f02",
+          "bus_id": "db3d1f28-203e-52e1-82d8-7eaf1c45f068",
           "bus_number": "402",
           "time": "06:15",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f03",
+          "bus_id": "a7153523-a1ef-5607-bcbc-a631f2a6a77b",
           "bus_number": "403",
           "time": "06:45",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f04",
+          "bus_id": "1887481e-07a1-519a-974f-7631f135742d",
           "bus_number": "404",
           "time": "14:30",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f05",
+          "bus_id": "e858e705-ee8e-5042-9951-8212e366f85e",
           "bus_number": "405",
           "time": "15:30",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f06",
+          "bus_id": "485b8e31-45bc-5387-84e2-07827eeb5cbb",
           "bus_number": "406",
           "time": "16:30",
           "route": "Westmead to Umlazi-1-F,G"
@@ -251,13 +251,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f07",
+          "bus_id": "b146c3af-c0be-5355-bb3f-d990bc5362dc",
           "bus_number": "407",
           "time": "07:00",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f08",
+          "bus_id": "fa782bbc-acf1-5c4c-b271-c76d2067d359",
           "bus_number": "408",
           "time": "15:30",
           "route": "Westmead to Umlazi-1-F,G"
@@ -265,13 +265,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f09",
+          "bus_id": "e344dadf-18b5-5096-96af-dbe87b97ba93",
           "bus_number": "409",
           "time": "08:00",
           "route": "Westmead to Umlazi-1-F,G"
         },
         {
-          "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f10",
+          "bus_id": "b4662588-f982-5607-8fba-761401b7c15a",
           "bus_number": "410",
           "time": "14:30",
           "route": "Westmead to Umlazi-1-F,G"
@@ -281,37 +281,37 @@
     "Umlazi-2-M&R": {
       "Monday-Friday": [
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a01",
+          "bus_id": "9ad541f5-9ec6-5dec-b534-bfa42084d5c8",
           "bus_number": "501",
           "time": "05:50",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a02",
+          "bus_id": "4f9d19f6-f53f-5a18-9e30-12d54d308970",
           "bus_number": "502",
           "time": "06:20",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a03",
+          "bus_id": "862766c2-1585-5152-bfb8-c91fbf69ed74",
           "bus_number": "503",
           "time": "06:50",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a04",
+          "bus_id": "c8fb5f31-b7b1-5c0b-ae4c-f2406e9bb043",
           "bus_number": "504",
           "time": "14:40",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a05",
+          "bus_id": "e2a9b179-25b6-5481-bb0e-9c88d2124620",
           "bus_number": "505",
           "time": "15:40",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a06",
+          "bus_id": "ea13cdee-6404-590d-b88f-b223b41fd161",
           "bus_number": "506",
           "time": "16:40",
           "route": "Westmead to Umlazi-2-M&R"
@@ -319,13 +319,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a07",
+          "bus_id": "fe038265-e6f1-5a44-9b45-8521151e5bf2",
           "bus_number": "507",
           "time": "07:20",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a08",
+          "bus_id": "2c3c4e6a-9d4b-5dc1-b04b-ae6315beebaf",
           "bus_number": "508",
           "time": "15:00",
           "route": "Westmead to Umlazi-2-M&R"
@@ -333,13 +333,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a09",
+          "bus_id": "a3d74efe-eb87-54d8-a5c7-6bfdfc7863bf",
           "bus_number": "509",
           "time": "08:20",
           "route": "Westmead to Umlazi-2-M&R"
         },
         {
-          "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a10",
+          "bus_id": "08e785a1-a0c2-5517-8b1f-2b81670d2b7f",
           "bus_number": "510",
           "time": "14:00",
           "route": "Westmead to Umlazi-2-M&R"
@@ -349,37 +349,37 @@
     "Umlazi-5-U": {
       "Monday-Friday": [
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b01",
+          "bus_id": "ee0bc209-3773-5f3b-ba3e-b9d44ca750bf",
           "bus_number": "601",
           "time": "06:00",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b02",
+          "bus_id": "4200fbbd-0f36-588d-b098-bc3fceea58ef",
           "bus_number": "602",
           "time": "06:30",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b03",
+          "bus_id": "c5c90890-a555-5f6c-bce0-47122fc6f5a1",
           "bus_number": "603",
           "time": "07:00",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b04",
+          "bus_id": "95f260e2-ec49-5074-91eb-1847ed114404",
           "bus_number": "604",
           "time": "14:50",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b05",
+          "bus_id": "43485cfe-da97-59fc-834b-59df9d020755",
           "bus_number": "605",
           "time": "15:50",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b06",
+          "bus_id": "38618a8b-589b-5c77-a6be-6b6c683481be",
           "bus_number": "606",
           "time": "16:50",
           "route": "Westmead to Umlazi-5-U"
@@ -387,13 +387,13 @@
       ],
       "Saturday": [
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b07",
+          "bus_id": "a3e59d92-561c-57c7-8e88-db251de9d1e6",
           "bus_number": "607",
           "time": "07:10",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b08",
+          "bus_id": "4a8a8b3a-98f3-58f1-8456-167730942f33",
           "bus_number": "608",
           "time": "15:20",
           "route": "Westmead to Umlazi-5-U"
@@ -401,13 +401,13 @@
       ],
       "Sunday": [
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b09",
+          "bus_id": "1a63a8c1-00be-558f-b7ab-aba42efa00a6",
           "bus_number": "609",
           "time": "08:10",
           "route": "Westmead to Umlazi-5-U"
         },
         {
-          "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b10",
+          "bus_id": "15308d1e-c1f3-58d3-9cc9-da1c6d985605",
           "bus_number": "610",
           "time": "14:15",
           "route": "Westmead to Umlazi-5-U"
