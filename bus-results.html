@@ -29,6 +29,7 @@
     </header>
 
     <main class="page-main">
+      <div id="passengerAlerts" class="passenger-alerts" hidden></div>
       <section class="results-panel">
         <p id="selectedRoute" class="results-route" aria-live="polite"></p>
 
@@ -53,6 +54,7 @@
         window.location.href = fallbackPage;
       }
     </script>
+    <script src="js/busDataStore.js"></script>
     <script src="js/bus-results.js"></script>
   </body>
 </html>
