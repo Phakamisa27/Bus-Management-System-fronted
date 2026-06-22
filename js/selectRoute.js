@@ -1,14 +1,34 @@
 // Route selection page — pick area + destination, then go to bus-results.html.
 
 let data = {};
-fetch("data/timeTable.json")
-  .then((res) => res.json())
-  .then((json) => {
-    data = json;
+BusDataStore.init()
+  .then(() => {
+    data = BusDataStore.getTimetableData();
+    renderPassengerAlerts();
   })
   .catch((err) => {
     console.error("[selectRoute] Failed to load timetable data:", err);
   });
+
+function renderPassengerAlerts() {
+  const alerts = BusDataStore.getActiveAlerts();
+  const container = document.getElementById("passengerAlerts");
+  if (!container || !alerts.length) return;
+
+  container.hidden = false;
+  container.innerHTML = alerts
+    .map(
+      (alert) =>
+        `<div class="passenger-alert" role="alert">${escapeAlertHtml(alert.message)}</div>`,
+    )
+    .join("");
+}
+
+function escapeAlertHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
 
 const areaInput = document.getElementById("areaInput");
 const areaSuggestions = document.getElementById("areaSuggestions");

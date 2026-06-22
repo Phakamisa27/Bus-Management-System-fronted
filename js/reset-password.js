@@ -7,14 +7,12 @@
  * The token is read from the URL query string, e.g.:
  *   reset-password.html?token=XYZ
  *
- * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
+ * BACKEND_URL comes from js/apiConfig.js (window.API_CONFIG.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  const BACKEND_URL =
-    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
+  const BACKEND_URL = window.API_CONFIG.BACKEND_URL;
 
   // How long (ms) to keep the success message on screen before redirecting.
   const REDIRECT_DELAY_MS = 3000;
@@ -262,7 +260,6 @@
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
         body: JSON.stringify({ token, new_password: newPassword }),
       });

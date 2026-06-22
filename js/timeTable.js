@@ -8,12 +8,11 @@
 //
 // The live map / location-sharing UI lives entirely on map.html (js/map.js).
 
-//Step1: ---- Load JSON ----
+//Step1: ---- Load bus data (active buses only) ----
 let data = {};
-fetch("data/timeTable.json")
-  .then((res) => res.json())
-  .then((json) => {
-    data = json;
+BusDataStore.init()
+  .then(() => {
+    data = BusDataStore.getTimetableData();
   })
   .catch((err) => {
     console.error("[timeTable] Failed to load timetable data:", err);

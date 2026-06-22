@@ -26,9 +26,7 @@
   "use strict";
 
   // Shared with auth pages via js/apiConfig.js; re-exposed on LiveBusTracking.
-  var BACKEND_URL =
-    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
+  var BACKEND_URL = window.API_CONFIG.BACKEND_URL;
   console.log("[liveTracking] BACKEND_URL =", BACKEND_URL);
   var POLL_MS = 5000;
   // A bus is considered "currently shared" only if its latest fix is no older
@@ -196,7 +194,6 @@
       method: "GET",
       cache: "no-store",
       headers: {
-        "ngrok-skip-browser-warning": "true",
         Accept: "application/json",
       },
     });

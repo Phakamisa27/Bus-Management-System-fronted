@@ -1,24 +1,20 @@
 /**
  * Login flow:
  *   POST {BACKEND_URL}/auth/login  { email, password }
- *   -> stores access_token in localStorage and redirects to the dashboard.
+ *   -> stores authToken + currentUser (passengers only) and redirects.
  *
- * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
+ * BACKEND_URL comes from js/apiConfig.js (window.API_CONFIG.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  const BACKEND_URL =
-    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
-
   const REDIRECT_AFTER_LOGIN = "companies.html";
+  const ADMIN_DENIED_MESSAGE =
+    "This login is for passengers only. Company admins must use the admin portal.";
+
+  const BACKEND_URL = window.API_CONFIG.BACKEND_URL;
 
   console.log("[login] BACKEND_URL =", BACKEND_URL);
-  console.log(
-    "[login] Sanity check: open this in a new tab — you should see FastAPI Swagger UI:",
-    `${BACKEND_URL}/docs`,
-  );
 
   function showStatus(msg, isError) {
     const el = document.getElementById("loginStatus");
@@ -34,7 +30,6 @@
         method: "GET",
         headers: {
           Accept: "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
       });
       const text = await res.text();
@@ -74,8 +69,7 @@
     } catch (err) {
       console.error("[login] Backend probe network error:", err, "URL:", url);
       showStatus(
-        `Cannot reach backend at ${BACKEND_URL}. ` +
-          `Check the ngrok URL and CORS. (${err.message || err})`,
+        `Cannot reach backend at ${BACKEND_URL}. (${err.message || err})`,
         true,
       );
     }
@@ -109,7 +103,6 @@
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
         body: JSON.stringify({ email, password }),
       });
@@ -183,8 +176,24 @@
       return;
     }
 
-    localStorage.setItem("access_token", token);
-    console.log("Login successful, token saved");
+    let user;
+    try {
+      user = await Auth.fetchCurrentUser(token);
+    } catch (profileErr) {
+      console.error("[login] Could not load user profile:", profileErr);
+      showStatus("Could not verify your account. Please try again.", true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    if (Auth.isAdminRole(user)) {
+      showStatus(ADMIN_DENIED_MESSAGE, true);
+      if (submitBtn) submitBtn.disabled = false;
+      return;
+    }
+
+    Auth.storePassengerAuth(token, user);
+    console.log("Login successful, passenger session saved");
     showStatus("Login successful. Redirecting...", false);
 
     window.location.href = REDIRECT_AFTER_LOGIN;

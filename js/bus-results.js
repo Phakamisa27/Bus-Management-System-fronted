@@ -152,10 +152,9 @@ function buildDayTabs() {
   });
 }
 
-fetch("data/timeTable.json")
-  .then((res) => res.json())
-  .then((json) => {
-    data = json;
+BusDataStore.init()
+  .then(() => {
+    data = BusDataStore.getTimetableData();
 
     if (!data[selectedArea] || !data[selectedArea][selectedDestination]) {
       window.location.href = "select-route.html";
@@ -164,8 +163,29 @@ fetch("data/timeTable.json")
 
     buildDayTabs();
     renderBusCards(activeDay);
+    renderPassengerAlerts();
   })
   .catch((err) => {
     console.error("[bus-results] Failed to load timetable data:", err);
     setBusListStatus("Could not load bus schedules. Please try again.");
   });
+
+function renderPassengerAlerts() {
+  const alerts = BusDataStore.getActiveAlerts();
+  const container = document.getElementById("passengerAlerts");
+  if (!container || !alerts.length) return;
+
+  container.hidden = false;
+  container.innerHTML = alerts
+    .map(
+      (alert) =>
+        `<div class="passenger-alert" role="alert">${escapeAlertHtml(alert.message)}</div>`,
+    )
+    .join("");
+}
+
+function escapeAlertHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}

@@ -3,14 +3,12 @@
  *   POST {BACKEND_URL}/auth/forgot-password  { email }
  *   -> always shows a neutral confirmation message (no account enumeration).
  *
- * BACKEND_URL comes from js/apiConfig.js (window.AppConfig.BACKEND_URL).
+ * BACKEND_URL comes from js/apiConfig.js (window.API_CONFIG.BACKEND_URL).
  */
 (function () {
   "use strict";
 
-  const BACKEND_URL =
-    (window.AppConfig && window.AppConfig.BACKEND_URL) ||
-    "https://bus-management-system-backend.onrender.com";
+  const BACKEND_URL = window.API_CONFIG.BACKEND_URL;
 
   const SUCCESS_MESSAGE =
     "If this email exists, reset instructions have been sent.";
@@ -53,7 +51,6 @@
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
         body: JSON.stringify({ email }),
       });

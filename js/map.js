@@ -8,8 +8,7 @@
 // BACKEND_URL from js/apiConfig.js (same source as auth pages).
 const BACKEND_URL =
   (window.LiveBusTracking && window.LiveBusTracking.BACKEND_URL) ||
-  (window.AppConfig && window.AppConfig.BACKEND_URL) ||
-  "https://bus-management-system-backend.onrender.com";
+  window.API_CONFIG.BACKEND_URL;
 
 const NO_LOCATION_MESSAGE =
   "No one is currently sharing the location of this bus.";
@@ -148,7 +147,6 @@ async function postPassengerLocation(position) {
 
   const headers = {
     "Content-Type": "application/json",
-    "ngrok-skip-browser-warning": "true",
     Accept: "application/json",
   };
   if (token) {

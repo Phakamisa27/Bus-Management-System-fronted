@@ -678,3 +678,20 @@ button:not(:disabled):active {
     font-size: 0.8125rem;
   }
 }
+
+.passenger-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.passenger-alert {
+  background: #fff7ed;
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  border-left: 4px solid #1e73ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #5a3b00;
+}

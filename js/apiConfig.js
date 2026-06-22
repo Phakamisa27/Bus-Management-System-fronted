@@ -1,19 +1,20 @@
 /**
- * Shared backend URL for the whole frontend.
- *
- * All environments (local browser, Netlify, Vercel, mobile) use the Render
- * backend so local and deployed frontends share the same database.
+ * Backend URL for the passenger frontend.
  *
  * Load this script before any page script that calls the API.
  */
 (function () {
   "use strict";
 
-  var BACKEND_URL = "https://bus-management-system-backend.onrender.com";
-
-  window.AppConfig = {
-    BACKEND_URL: BACKEND_URL,
+  window.API_CONFIG = {
+    BACKEND_URL: "https://bus-management-system-backend.onrender.com",
   };
 
-  console.log("Backend: Render Production");
+  window.AppConfig = window.API_CONFIG;
+
+  console.log(
+    "[apiConfig] Using backend:",
+    window.API_CONFIG.BACKEND_URL,
+    "(environment: render)",
+  );
 })();
