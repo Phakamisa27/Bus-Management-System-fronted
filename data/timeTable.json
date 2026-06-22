@@ -1,42 +1,42 @@
 {
-  "Folweni": {
-    "Durban": {
+  "Umlazi-1-F,G": {
+    "Westmead": {
       "Monday-Friday": [
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c01",
           "bus_number": "101",
-          "time": "05:45",
-          "route": "Folweni to Durban"
+          "time": "05:30",
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c02",
           "bus_number": "102",
-          "time": "06:15",
-          "route": "Folweni to Durban"
+          "time": "06:00",
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c03",
           "bus_number": "103",
-          "time": "06:45",
-          "route": "Folweni to Durban"
+          "time": "06:30",
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c04",
           "bus_number": "104",
-          "time": "14:30",
-          "route": "Folweni to Durban"
+          "time": "07:00",
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c05",
           "bus_number": "105",
-          "time": "15:30",
-          "route": "Folweni to Durban"
+          "time": "15:00",
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c06",
           "bus_number": "106",
-          "time": "16:45",
-          "route": "Folweni to Durban"
+          "time": "16:00",
+          "route": "Umlazi-1-F,G to Westmead"
         }
       ],
       "Saturday": [
@@ -44,13 +44,13 @@
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c07",
           "bus_number": "107",
           "time": "07:00",
-          "route": "Folweni to Durban"
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c08",
           "bus_number": "108",
           "time": "15:00",
-          "route": "Folweni to Durban"
+          "route": "Umlazi-1-F,G to Westmead"
         }
       ],
       "Sunday": [
@@ -58,53 +58,55 @@
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c09",
           "bus_number": "109",
           "time": "08:00",
-          "route": "Folweni to Durban"
+          "route": "Umlazi-1-F,G to Westmead"
         },
         {
           "bus_id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c10",
           "bus_number": "110",
           "time": "14:00",
-          "route": "Folweni to Durban"
+          "route": "Umlazi-1-F,G to Westmead"
         }
       ]
-    },
+    }
+  },
+  "Umlazi-2-M&R": {
     "Westmead": {
       "Monday-Friday": [
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d01",
           "bus_number": "201",
-          "time": "05:50",
-          "route": "Folweni to Westmead"
+          "time": "05:40",
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d02",
           "bus_number": "202",
-          "time": "06:20",
-          "route": "Folweni to Westmead"
+          "time": "06:10",
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d03",
           "bus_number": "203",
-          "time": "07:00",
-          "route": "Folweni to Westmead"
+          "time": "06:40",
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d04",
           "bus_number": "204",
-          "time": "14:15",
-          "route": "Folweni to Westmead"
+          "time": "07:10",
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d05",
           "bus_number": "205",
-          "time": "15:15",
-          "route": "Folweni to Westmead"
+          "time": "15:10",
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d06",
           "bus_number": "206",
-          "time": "16:30",
-          "route": "Folweni to Westmead"
+          "time": "16:10",
+          "route": "Umlazi-2-M&R to Westmead"
         }
       ],
       "Saturday": [
@@ -112,13 +114,13 @@
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d07",
           "bus_number": "207",
           "time": "07:15",
-          "route": "Folweni to Westmead"
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d08",
           "bus_number": "208",
           "time": "14:45",
-          "route": "Folweni to Westmead"
+          "route": "Umlazi-2-M&R to Westmead"
         }
       ],
       "Sunday": [
@@ -126,53 +128,55 @@
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d09",
           "bus_number": "209",
           "time": "08:15",
-          "route": "Folweni to Westmead"
+          "route": "Umlazi-2-M&R to Westmead"
         },
         {
           "bus_id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d10",
           "bus_number": "210",
           "time": "13:30",
-          "route": "Folweni to Westmead"
+          "route": "Umlazi-2-M&R to Westmead"
         }
       ]
-    },
-    "Jacobs": {
+    }
+  },
+  "Umlazi-5-U": {
+    "Westmead": {
       "Monday-Friday": [
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e01",
           "bus_number": "301",
-          "time": "06:00",
-          "route": "Folweni to Jacobs"
+          "time": "05:50",
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e02",
           "bus_number": "302",
-          "time": "06:30",
-          "route": "Folweni to Jacobs"
+          "time": "06:20",
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e03",
           "bus_number": "303",
-          "time": "07:15",
-          "route": "Folweni to Jacobs"
+          "time": "06:50",
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e04",
           "bus_number": "304",
-          "time": "14:00",
-          "route": "Folweni to Jacobs"
+          "time": "07:20",
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e05",
           "bus_number": "305",
-          "time": "15:00",
-          "route": "Folweni to Jacobs"
+          "time": "15:20",
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e06",
           "bus_number": "306",
-          "time": "16:15",
-          "route": "Folweni to Jacobs"
+          "time": "16:20",
+          "route": "Umlazi-5-U to Westmead"
         }
       ],
       "Saturday": [
@@ -180,13 +184,13 @@
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e07",
           "bus_number": "307",
           "time": "07:30",
-          "route": "Folweni to Jacobs"
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e08",
           "bus_number": "308",
           "time": "15:15",
-          "route": "Folweni to Jacobs"
+          "route": "Umlazi-5-U to Westmead"
         }
       ],
       "Sunday": [
@@ -194,55 +198,55 @@
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e09",
           "bus_number": "309",
           "time": "08:30",
-          "route": "Folweni to Jacobs"
+          "route": "Umlazi-5-U to Westmead"
         },
         {
           "bus_id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e10",
           "bus_number": "310",
           "time": "13:45",
-          "route": "Folweni to Jacobs"
+          "route": "Umlazi-5-U to Westmead"
         }
       ]
     }
   },
-  "Durban": {
-    "Folweni": {
+  "Westmead": {
+    "Umlazi-1-F,G": {
       "Monday-Friday": [
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f01",
           "bus_number": "401",
-          "time": "05:30",
-          "route": "Durban to Folweni"
+          "time": "05:45",
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f02",
           "bus_number": "402",
-          "time": "06:00",
-          "route": "Durban to Folweni"
+          "time": "06:15",
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f03",
           "bus_number": "403",
-          "time": "06:30",
-          "route": "Durban to Folweni"
+          "time": "06:45",
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f04",
           "bus_number": "404",
-          "time": "15:00",
-          "route": "Durban to Folweni"
+          "time": "14:30",
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f05",
           "bus_number": "405",
-          "time": "16:00",
-          "route": "Durban to Folweni"
+          "time": "15:30",
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f06",
           "bus_number": "406",
-          "time": "17:00",
-          "route": "Durban to Folweni"
+          "time": "16:30",
+          "route": "Westmead to Umlazi-1-F,G"
         }
       ],
       "Saturday": [
@@ -250,13 +254,13 @@
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f07",
           "bus_number": "407",
           "time": "07:00",
-          "route": "Durban to Folweni"
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f08",
           "bus_number": "408",
           "time": "15:30",
-          "route": "Durban to Folweni"
+          "route": "Westmead to Umlazi-1-F,G"
         }
       ],
       "Sunday": [
@@ -264,55 +268,53 @@
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f09",
           "bus_number": "409",
           "time": "08:00",
-          "route": "Durban to Folweni"
+          "route": "Westmead to Umlazi-1-F,G"
         },
         {
           "bus_id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f10",
           "bus_number": "410",
           "time": "14:30",
-          "route": "Durban to Folweni"
+          "route": "Westmead to Umlazi-1-F,G"
         }
       ]
-    }
-  },
-  "Westmead": {
-    "Folweni": {
+    },
+    "Umlazi-2-M&R": {
       "Monday-Friday": [
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a01",
           "bus_number": "501",
-          "time": "05:40",
-          "route": "Westmead to Folweni"
+          "time": "05:50",
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a02",
           "bus_number": "502",
-          "time": "06:10",
-          "route": "Westmead to Folweni"
+          "time": "06:20",
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a03",
           "bus_number": "503",
-          "time": "06:45",
-          "route": "Westmead to Folweni"
+          "time": "06:50",
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a04",
           "bus_number": "504",
-          "time": "14:45",
-          "route": "Westmead to Folweni"
+          "time": "14:40",
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a05",
           "bus_number": "505",
-          "time": "15:45",
-          "route": "Westmead to Folweni"
+          "time": "15:40",
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a06",
           "bus_number": "506",
-          "time": "17:00",
-          "route": "Westmead to Folweni"
+          "time": "16:40",
+          "route": "Westmead to Umlazi-2-M&R"
         }
       ],
       "Saturday": [
@@ -320,13 +322,13 @@
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a07",
           "bus_number": "507",
           "time": "07:20",
-          "route": "Westmead to Folweni"
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a08",
           "bus_number": "508",
           "time": "15:00",
-          "route": "Westmead to Folweni"
+          "route": "Westmead to Umlazi-2-M&R"
         }
       ],
       "Sunday": [
@@ -334,55 +336,53 @@
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a09",
           "bus_number": "509",
           "time": "08:20",
-          "route": "Westmead to Folweni"
+          "route": "Westmead to Umlazi-2-M&R"
         },
         {
           "bus_id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a10",
           "bus_number": "510",
           "time": "14:00",
-          "route": "Westmead to Folweni"
+          "route": "Westmead to Umlazi-2-M&R"
         }
       ]
-    }
-  },
-  "Jacobs": {
-    "Folweni": {
+    },
+    "Umlazi-5-U": {
       "Monday-Friday": [
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b01",
           "bus_number": "601",
-          "time": "05:35",
-          "route": "Jacobs to Folweni"
+          "time": "06:00",
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b02",
           "bus_number": "602",
-          "time": "06:05",
-          "route": "Jacobs to Folweni"
+          "time": "06:30",
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b03",
           "bus_number": "603",
-          "time": "06:40",
-          "route": "Jacobs to Folweni"
+          "time": "07:00",
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b04",
           "bus_number": "604",
-          "time": "14:30",
-          "route": "Jacobs to Folweni"
+          "time": "14:50",
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b05",
           "bus_number": "605",
-          "time": "15:30",
-          "route": "Jacobs to Folweni"
+          "time": "15:50",
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b06",
           "bus_number": "606",
-          "time": "16:45",
-          "route": "Jacobs to Folweni"
+          "time": "16:50",
+          "route": "Westmead to Umlazi-5-U"
         }
       ],
       "Saturday": [
@@ -390,13 +390,13 @@
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b07",
           "bus_number": "607",
           "time": "07:10",
-          "route": "Jacobs to Folweni"
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b08",
           "bus_number": "608",
           "time": "15:20",
-          "route": "Jacobs to Folweni"
+          "route": "Westmead to Umlazi-5-U"
         }
       ],
       "Sunday": [
@@ -404,13 +404,13 @@
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b09",
           "bus_number": "609",
           "time": "08:10",
-          "route": "Jacobs to Folweni"
+          "route": "Westmead to Umlazi-5-U"
         },
         {
           "bus_id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b10",
           "bus_number": "610",
           "time": "14:15",
-          "route": "Jacobs to Folweni"
+          "route": "Westmead to Umlazi-5-U"
         }
       ]
     }
